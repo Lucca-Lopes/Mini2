@@ -6,16 +6,23 @@
 //
 
 import SwiftUI
+import SpriteKit
 
 struct ContentView: View {
+    var scene: SKScene {
+        let scene = GameScene()
+        scene.scaleMode = .resizeFill
+        return scene
+    }
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        SpriteView(scene: scene)
+            .ignoresSafeArea()
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}
