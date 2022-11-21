@@ -6,16 +6,34 @@
 //
 
 import SwiftUI
+import SpriteKit
 
 struct ContentView: View {
+    @State var showConfig = false
+    
+    var scene: SKScene{
+        //crio a variavel que cria uma cena através do inicializador GameScene()
+        let scene = GameScene()
+        scene.scaleMode = .resizeFill
+        return scene //retorno a cena
+    }
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView{
+            VStack{
+                HStack{
+                    NavigationLink(destination: {
+                        ConfiguracoesView()
+                    }, label: {
+                            Image(systemName: "info.circle")
+                        })
+                    .navigationBarHidden(true)
+                    .navigationBarTitle("Voltar")
+                    }
+                }
+            }
+        }
+//        SpriteView(scene: scene)
+//            .ignoresSafeArea()
     }
-}
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
