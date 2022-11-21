@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0022A89D29282464002D02E6 /* SKButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0022A89C29282464002D02E6 /* SKButtonNode.swift */; };
 		2B5EF04E292563360082F1F6 /* MiniChallenge2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5EF04D292563360082F1F6 /* MiniChallenge2App.swift */; };
 		2B5EF050292563360082F1F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5EF04F292563360082F1F6 /* ContentView.swift */; };
 		2B5EF052292563390082F1F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B5EF051292563390082F1F6 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0022A89C29282464002D02E6 /* SKButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKButtonNode.swift; sourceTree = "<group>"; };
 		2B5EF04A292563360082F1F6 /* MiniChallenge2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniChallenge2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B5EF04D292563360082F1F6 /* MiniChallenge2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniChallenge2App.swift; sourceTree = "<group>"; };
 		2B5EF04F292563360082F1F6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -41,6 +43,7 @@
 		2B5EF041292563360082F1F6 = {
 			isa = PBXGroup;
 			children = (
+				0022A89C29282464002D02E6 /* SKButtonNode.swift */,
 				2B5EF04C292563360082F1F6 /* MiniChallenge2 */,
 				2B5EF04B292563360082F1F6 /* Products */,
 			);
@@ -173,6 +176,7 @@
 				2B9B07AB2927F7E80096A50F /* GameScene.swift in Sources */,
 				2B5EF050292563360082F1F6 /* ContentView.swift in Sources */,
 				2B9CA859292577F90020EB8E /* Container.xcdatamodeld in Sources */,
+				0022A89D29282464002D02E6 /* SKButtonNode.swift in Sources */,
 				2B9CA856292576E40020EB8E /* CoreDataViewModel.swift in Sources */,
 				2B5EF04E292563360082F1F6 /* MiniChallenge2App.swift in Sources */,
 			);
@@ -303,7 +307,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MiniChallenge2/Preview Content\"";
-				DEVELOPMENT_TEAM = RRUDNBUBWM;
+				DEVELOPMENT_TEAM = V32Q5HA7F8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -332,7 +336,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MiniChallenge2/Preview Content\"";
-				DEVELOPMENT_TEAM = RRUDNBUBWM;
+				DEVELOPMENT_TEAM = V32Q5HA7F8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
