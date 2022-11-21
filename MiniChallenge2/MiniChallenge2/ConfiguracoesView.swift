@@ -38,6 +38,8 @@ struct ConfiguracoesView: View {
                 .buttonBorderShape(.automatic)
                 .controlSize(.large)
             }
+//preciso escutar a mudança desse State para conseguir mostrar uma tela na frente
+//$showModal1 é um binding
             .sheet(isPresented: $showModal1){
                 SobreView()
             }
@@ -92,24 +94,5 @@ struct ConfiguracoesView: View {
             .navigationTitle("Info")
             .navigationBarTitleDisplayMode(.inline)
             .padding()
-    }
-        
-    
-    struct ModalView1: View {
-        var body: some View {
-               SobreView()
-        }
-    }
-    
-    struct ModalView2: View {
-        var body: some View {
-            PoliticaPrivacidadeView()
-        }
-    }
-    
-    struct ModalView3: View {
-        var body: some View {
-            TermosUsoView()
-        }
     }
 }
