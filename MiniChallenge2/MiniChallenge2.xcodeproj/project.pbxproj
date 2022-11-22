@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0009BF9F292D30EE00502304 /* BarraDeProgresso.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0009BF9E292D30EE00502304 /* BarraDeProgresso.swift */; };
 		0022A89D29282464002D02E6 /* SKButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0022A89C29282464002D02E6 /* SKButtonNode.swift */; };
 		2B5EF04E292563360082F1F6 /* MiniChallenge2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5EF04D292563360082F1F6 /* MiniChallenge2App.swift */; };
 		2B5EF050292563360082F1F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5EF04F292563360082F1F6 /* ContentView.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0009BF9E292D30EE00502304 /* BarraDeProgresso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarraDeProgresso.swift; sourceTree = "<group>"; };
 		0022A89C29282464002D02E6 /* SKButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKButtonNode.swift; sourceTree = "<group>"; };
 		2B5EF04A292563360082F1F6 /* MiniChallenge2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniChallenge2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B5EF04D292563360082F1F6 /* MiniChallenge2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniChallenge2App.swift; sourceTree = "<group>"; };
@@ -43,7 +45,6 @@
 		2B5EF041292563360082F1F6 = {
 			isa = PBXGroup;
 			children = (
-				0022A89C29282464002D02E6 /* SKButtonNode.swift */,
 				2B5EF04C292563360082F1F6 /* MiniChallenge2 */,
 				2B5EF04B292563360082F1F6 /* Products */,
 			);
@@ -97,8 +98,10 @@
 		2B9CA8542925763E0020EB8E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0022A89C29282464002D02E6 /* SKButtonNode.swift */,
 				2B5EF04F292563360082F1F6 /* ContentView.swift */,
 				2B9B07AA2927F7E80096A50F /* GameScene.swift */,
+				0009BF9E292D30EE00502304 /* BarraDeProgresso.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 			files = (
 				2B9B07AB2927F7E80096A50F /* GameScene.swift in Sources */,
 				2B5EF050292563360082F1F6 /* ContentView.swift in Sources */,
+				0009BF9F292D30EE00502304 /* BarraDeProgresso.swift in Sources */,
 				2B9CA859292577F90020EB8E /* Container.xcdatamodeld in Sources */,
 				0022A89D29282464002D02E6 /* SKButtonNode.swift in Sources */,
 				2B9CA856292576E40020EB8E /* CoreDataViewModel.swift in Sources */,

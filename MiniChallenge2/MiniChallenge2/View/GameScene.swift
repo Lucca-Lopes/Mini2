@@ -10,6 +10,8 @@ import SwiftUI
 
 class GameScene: SKScene{
     
+//    private var moedaBarra: BarraDeProgresso?
+    
     override func didMove(to view: SKView) {
         backgroundColor = .systemGray6
         hud()
@@ -17,34 +19,42 @@ class GameScene: SKScene{
         let posCova = CGFloat((131/4)-2)
 
         let areaPobre = area(posX: 1, posY: 0.7)
-        let covaPobreEsq = cova(pos: areaPobre, sep: -posCova, nome: "pobre")
-        let covaPobreDir = cova(pos: areaPobre, sep: posCova, nome: "pobre")
+        cova(pos: areaPobre, sep: -posCova, nome: "pobre")
+        cova(pos: areaPobre, sep: posCova, nome: "pobre")
 
 
         let areaTrabalhador = area(posX: 3, posY: 0.7)
-        let covaTrabEsq = cova(pos: areaTrabalhador, sep: -posCova, nome: "pobre")
-        let covaTrabDir = cova(pos: areaTrabalhador, sep: posCova, nome: "pobre")
+        cova(pos: areaTrabalhador, sep: -posCova, nome: "trabalhador")
+        cova(pos: areaTrabalhador, sep: posCova, nome: "trabalhador")
 
 
         let areaArtista = area(posX: 1, posY: 0.45)
-        let covaArteEsq = cova(pos: areaArtista, sep: -posCova, nome: "pobre")
-        let covaArteDir = cova(pos: areaArtista, sep: posCova, nome: "pobre")
+        cova(pos: areaArtista, sep: -posCova, nome: "artista")
+        cova(pos: areaArtista, sep: posCova, nome: "artista")
 
 
         let areaEmpresario = area(posX: 3, posY: 0.45)
-        let covaEmpresaEsq = cova(pos: areaEmpresario, sep: -posCova, nome: "pobre")
-        let covaEmpresaDir = cova(pos: areaEmpresario, sep: posCova, nome: "pobre")
+        cova(pos: areaEmpresario, sep: -posCova, nome: "empresario")
+        cova(pos: areaEmpresario, sep: posCova, nome: "empresario")
 
 
         let areaMilitar = area(posX: 1, posY: 0.2)
-        let covaMilitarEsq = cova(pos: areaMilitar, sep: -posCova, nome: "pobre")
-        let covaMilitarDir = cova(pos: areaMilitar, sep: posCova, nome: "pobre")
+        cova(pos: areaMilitar, sep: -posCova, nome: "militar")
+        cova(pos: areaMilitar, sep: posCova, nome: "militar")
 
 
         let areaRealeza = area(posX: 3, posY: 0.2)
-        let covaRealEsq = cova(pos: areaRealeza, sep: -posCova, nome: "pobre")
-        let covaRealDir = cova(pos: areaRealeza, sep: posCova, nome: "pobre")
+        cova(pos: areaRealeza, sep: -posCova, nome: "rei")
+        cova(pos: areaRealeza, sep: posCova, nome: "rei")
+        
+//        moedaBarra = BarraDeProgresso()
+//        addChild(moedaBarra!)
     }
+    
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        moedaBarra?.progresso(0.01)
+//    }
+    
     
     //posX: 1=esquerda, 3=direita
     func area(posX: CGFloat, posY: CGFloat) -> CGPoint{
@@ -60,7 +70,7 @@ class GameScene: SKScene{
         return box.position
     }
     
-    func cova(pos: CGPoint, sep: CGFloat, nome: String) -> CGPoint{
+    func cova(pos: CGPoint, sep: CGFloat, nome: String){
         let box = SKSpriteNode(color: .lightGray, size: CGSize(width: 48, height: 115))
         
         let x = pos.x
@@ -70,8 +80,6 @@ class GameScene: SKScene{
         
         addChild(box)
         fantasminha(pos: CGPoint(x: box.position.x, y: box.position.y), nome: nome)
-        
-        return box.position
     }
     
     func fantasminha(pos: CGPoint, nome: String){
@@ -94,7 +102,7 @@ class GameScene: SKScene{
         moedaImg.fillColor = .yellow
         moedaImg.position = CGPoint(x: 55, y: self.size.height-100)
         
-        let moedaLabel = SKLabelNode(text: "099")
+        let moedaLabel = SKLabelNode(text: "999")
         moedaLabel.fontColor = .black
         moedaLabel.verticalAlignmentMode = .center
         moedaLabel.horizontalAlignmentMode = .left
@@ -104,6 +112,5 @@ class GameScene: SKScene{
         addChild(moedaImg)
         addChild(moedaLabel)
         addChild(infoButton)
-        
     }
 }
