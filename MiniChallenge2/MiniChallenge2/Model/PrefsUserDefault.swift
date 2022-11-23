@@ -9,9 +9,11 @@ import Foundation
 
 class PrefsUserDefault {
     var moedas: Int = 0
+    var primeiroUso: Bool = true
     
     init(){
         carregarMoedas()
+        verificaPrimeiroUso()
     }
     
     func carregarMoedas(){
@@ -22,4 +24,14 @@ class PrefsUserDefault {
             moedas = 0
         }
     }
+    
+    func verificaPrimeiroUso(){
+        if let load = UserDefaults().value(forKey: "primeiroUso") as? Bool {
+            primeiroUso = load
+        }
+        else {
+            primeiroUso = true
+        }
+    }
+    
 }

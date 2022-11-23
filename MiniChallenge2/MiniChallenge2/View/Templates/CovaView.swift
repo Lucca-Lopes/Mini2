@@ -14,7 +14,7 @@ public class CovaView: SKNode {
     let cova: SKSpriteNode
     let fantasma: SKSpriteNode
     
-    public init(posMausoleu: CGPoint, separador: CGFloat, nome: String){
+    public init(posMausoleu: CGPoint, separador: CGFloat, nome: String, entidade: Cova){
         self.posMausoleu = posMausoleu
         self.separador = separador
         self.nome = nome

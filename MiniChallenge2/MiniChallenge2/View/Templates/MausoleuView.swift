@@ -11,7 +11,7 @@ public class MausoleuView: SKNode {
     let screenWidth = UIScreen.main.bounds.size.width
     let screenHeight = UIScreen.main.bounds.size.height
     
-    public init(posMausoleu: CGPoint, nome: String) {
+    public init(posMausoleu: CGPoint, nome: String, entidade: Mausoleu) {
         
         let separador = CGFloat((131/4)-2)
         
@@ -19,11 +19,9 @@ public class MausoleuView: SKNode {
         let x = (screenWidth / 2) / 2
         let y = (screenHeight * posMausoleu.y)
         AreaMausoleu.position = CGPoint(x: x * posMausoleu.x, y: y)
-        
-        print("Posicao mausoleu: \(posMausoleu)")
-        
-        let cova1 = CovaView(posMausoleu: CGPoint.zero, separador: -separador, nome: nome)
-        let cova2 = CovaView(posMausoleu: CGPoint.zero, separador: separador, nome: nome)
+                
+        let cova1 = CovaView(posMausoleu: CGPoint.zero, separador: -separador, nome: nome, entidade: entidade.covas[0])
+        let cova2 = CovaView(posMausoleu: CGPoint.zero, separador: separador, nome: nome, entidade: entidade.covas[1])
         
         super.init()
         

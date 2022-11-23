@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21512" systemVersion="21G217" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Cova" representedClassName="Cova" syncable="YES" codeGenerationType="class">
-        <attribute name="ativa" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="ativa" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="moedasGanhas" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="nome" optional="YES" attributeType="String"/>
         <attribute name="preco" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
@@ -9,7 +9,7 @@
         <relationship name="mausoleu" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Mausoleu" inverseName="covas" inverseEntity="Mausoleu"/>
     </entity>
     <entity name="Mausoleu" representedClassName="Mausoleu" syncable="YES" codeGenerationType="class">
-        <attribute name="ativo" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="ativo" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="nome" optional="YES" attributeType="String"/>
         <attribute name="preco" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="covas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Cova" inverseName="mausoleu" inverseEntity="Cova"/>
