@@ -13,6 +13,7 @@ class GameScene: SKScene{
     
     override func didMove(to view: SKView) {
         backgroundColor = .systemGray6
+        hud()
         
         //Em posMausoleu, para criar a área na direita, passa-se 1 como parâmetro do x. Para criar na esquerda, passa-se 3.
         let mausoleu1 = MausoleuView(posMausoleu: CGPoint(x: 1, y: 0.7), nome: "pobre")
@@ -57,5 +58,29 @@ class GameScene: SKScene{
 //        area(posX: 1, posY: 2.7)
 //        area(posX: 1, posY: 4.4)
 //        area(posX: 1, posY: 6.1)
+    }
+    
+    func hud() {
+        let infoButton = BotaoNode(image: SKSpriteNode(texture: SKTexture(image: UIImage(systemName: "info.circle")!))){
+            print("Clicou")
+        }
+        
+        infoButton.image?.size = CGSize(width: 35, height: 35)
+        infoButton.position = CGPoint(x: self.size.width-55, y: self.size.height-100)
+        
+        let moedaImg = SKShapeNode(circleOfRadius: 17.5)
+        moedaImg.fillColor = .yellow
+        moedaImg.position = CGPoint(x: 55, y: self.size.height-100)
+        
+        let moedaLabel = SKLabelNode(text: "999")
+        moedaLabel.fontColor = .black
+        moedaLabel.verticalAlignmentMode = .center
+        moedaLabel.horizontalAlignmentMode = .left
+        moedaLabel.fontSize = 35
+        moedaLabel.position = CGPoint(x: moedaImg.position.x+30, y: moedaImg.position.y)
+        
+        addChild(moedaImg)
+        addChild(moedaLabel)
+        addChild(infoButton)
     }
 }
