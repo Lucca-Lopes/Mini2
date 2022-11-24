@@ -23,39 +23,12 @@ class GameScene: SKScene{
         let mausoleu5 = MausoleuView(posMausoleu: CGPoint(x: 3, y: 0.45), nome: "empresario")
         let mausoleu6 = MausoleuView(posMausoleu: CGPoint(x: 3, y: 0.2), nome: "rei")
         
+        addChild(HUDView())
         addChild(mausoleu1)
         addChild(mausoleu2)
         addChild(mausoleu3)
         addChild(mausoleu4)
         addChild(mausoleu5)
         addChild(mausoleu6)
-        
-//        let posCova = CGFloat((131/4)-2)
-        
-//        let a1 = vm.area(posX: 1, posY: 0.75)
-//        let c1 = vm.cova(pos: a1.position, sep: -posCova, nome: "PobreG")
-//        let c2 = vm.cova(pos: a1.position, sep: posCova, nome: "EmpresarioG")
-//        vm.fantasminha(pos: c1.position, nome: "PobreG")
-//        vm.fantasminha(pos: c2.position, nome: "EmpresarioG")
-        
-//        vm.area(posX: 1, posY: 0.5)
-//        vm.area(posX: 1, posY: 0.25)
-        
-//        addChild(a1)
-//        addChild(c1)
-//        addChild(c2)
-//        addChild(vm.fantasminha(pos: c1.position, nome: "PobreG"))
-//        addChild(vm.fantasminha(pos: c2.position, nome: "EmpresarioG"))
-        
-        
-        
-//        area(posX: 3, posY: 2.7)
-//        area(posX: 3, posY: 4.4)
-//        area(posX: 3, posY: 6.1)
-//
-//        area(posX: 1, posY: 1)
-//        area(posX: 1, posY: 2.7)
-//        area(posX: 1, posY: 4.4)
-//        area(posX: 1, posY: 6.1)
     }
 }
