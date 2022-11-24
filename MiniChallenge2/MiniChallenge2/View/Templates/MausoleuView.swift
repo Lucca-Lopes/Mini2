@@ -14,20 +14,23 @@ public class MausoleuView: SKNode {
     public init(posMausoleu: CGPoint, nome: String, entidade: Mausoleu) {
         
         let separador = CGFloat((131/4)-2)
-        
         let AreaMausoleu = SKSpriteNode(color: .gray, size: CGSize(width: 131, height: 142))
         let x = (screenWidth / 2) / 2
         let y = (screenHeight * posMausoleu.y)
         AreaMausoleu.position = CGPoint(x: x * posMausoleu.x, y: y)
-                
-        let cova1 = CovaView(posMausoleu: CGPoint.zero, separador: -separador, nome: nome, entidade: entidade.covas[0])
-        let cova2 = CovaView(posMausoleu: CGPoint.zero, separador: separador, nome: nome, entidade: entidade.covas[1])
         
         super.init()
         
         self.addChild(AreaMausoleu)
-        AreaMausoleu.addChild(cova1)
-        AreaMausoleu.addChild(cova2)
+//        AreaMausoleu.addChild(cova1)
+//        AreaMausoleu.addChild(cova2)
+        
+        if let covas = entidade.covas?.allObjects as? [Cova] {
+            for cova in covas {
+                addChild(CovaView(posMausoleu: CGPoint.zero, separador: -separador, nome: nome, entidade: cova))
+                print("chegou aqui")
+            }
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
