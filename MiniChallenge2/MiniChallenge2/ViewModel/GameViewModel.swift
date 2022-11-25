@@ -32,8 +32,8 @@ class GameViewModel: ObservableObject {
             carregarCovas()
             moedas = prefsUserDefault.moedas
         }
-        print(mausoleus)
-        print(covas)
+//        print(mausoleus)
+//        print(covas)
     }
     
     private func salvar(){
@@ -90,15 +90,17 @@ class GameViewModel: ObservableObject {
         let m6Cova2 = gerarCova(nome: "pobre", preco: 100, moedasGanhas: 5, tempoDeRecarga: 5)
         
         mausoleu1.covas = [m1Cova1, m1Cova2]
+//        mausoleu1.covas.append
         mausoleu2.covas = [m2Cova1, m2Cova2]
         mausoleu3.covas = [m3Cova1, m3Cova2]
         mausoleu4.covas = [m4Cova1, m4Cova2]
         mausoleu5.covas = [m5Cova1, m5Cova2]
         mausoleu6.covas = [m6Cova1, m6Cova2]
         
-        mausoleus = [mausoleu1, mausoleu2, mausoleu3, mausoleu4, mausoleu5, mausoleu6]
+//        mausoleus = [mausoleu1, mausoleu2, mausoleu3, mausoleu4, mausoleu5, mausoleu6]
+        mausoleus.append(mausoleu1)
         covas = [m1Cova1, m1Cova2, m2Cova1, m2Cova2, m3Cova1, m3Cova2, m4Cova1, m4Cova2, m5Cova1, m5Cova2, m6Cova1, m6Cova2]
-        
+        prefsUserDefault.moedas = 0
         salvar()
     }
     

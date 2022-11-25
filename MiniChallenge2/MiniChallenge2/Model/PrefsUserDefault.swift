@@ -13,7 +13,7 @@ class PrefsUserDefault {
     
     init(){
         carregarMoedas()
-        verificaPrimeiroUso()
+//        verificaPrimeiroUso()
     }
     
     func carregarMoedas(){
@@ -25,13 +25,17 @@ class PrefsUserDefault {
         }
     }
     
-    func verificaPrimeiroUso(){
-        if let load = UserDefaults().value(forKey: "primeiroUso") as? Bool {
-            primeiroUso = load
-        }
-        else {
-            primeiroUso = true
-        }
+//    func verificaPrimeiroUso(){
+//        if let load = UserDefaults().value(forKey: "primeiroUso") as? Bool {
+//            primeiroUso = load
+//        }
+//        else {
+//            primeiroUso = true
+//        }
+//    }
+    
+    func clearUD(){
+//        UserDefaults.
     }
     
 }

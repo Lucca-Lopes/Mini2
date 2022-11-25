@@ -24,11 +24,13 @@ public class MausoleuView: SKNode {
         self.addChild(AreaMausoleu)
 //        AreaMausoleu.addChild(cova1)
 //        AreaMausoleu.addChild(cova2)
-        
+        print(entidade.covas)
         if let covas = entidade.covas?.allObjects as? [Cova] {
+            print(covas)
             for cova in covas {
-                addChild(CovaView(posMausoleu: CGPoint.zero, separador: -separador, nome: nome, entidade: cova))
                 print("chegou aqui")
+                addChild(CovaView(posMausoleu: CGPoint.zero, separador: -separador, nome: nome, entidade: cova))
+                
             }
         }
     }
