@@ -8,22 +8,56 @@
 import Foundation
 
 class PrefsUserDefault {
-    var moedas: Int = 0
+    
+    let userDefaults = UserDefaults.standard
+    
     var primeiroUso: Bool = true
+    var moedas: Int = 0
+    
+    var mausoleus: [Bool] = []
+    var covas: [Bool] = []
     
     init(){
-        carregarMoedas()
 //        verificaPrimeiroUso()
+        carregarJogo()
+    }
+    
+    func carregarJogo(){
+        carregarMoedas()
+        carregarMausoleus()
+        carregarCovas()
+        print(mausoleus)
+        print(covas)
     }
     
     func carregarMoedas(){
-        if let load = UserDefaults().value(forKey: "moedas") as? Int {
+        if let load = userDefaults.value(forKey: "moedas") as? Int {
             moedas = load
         }
         else {
             moedas = 0
         }
     }
+    
+    func carregarMausoleus(){
+        if let load = userDefaults.value(forKey: "mausoleus") as? [Bool] {
+            mausoleus = load
+        }
+        else {
+            mausoleus = [true, false, false, false, false, false]
+        }
+        
+    }
+    
+    func carregarCovas(){
+        if let load = userDefaults.value(forKey: "covas") as? [Bool] {
+            covas = load
+        }
+        else {
+            covas = [true, false, false, false, false, false, false, false, false, false, false, false]
+        }
+    }
+    
     
 //    func verificaPrimeiroUso(){
 //        if let load = UserDefaults().value(forKey: "primeiroUso") as? Bool {
@@ -33,9 +67,4 @@ class PrefsUserDefault {
 //            primeiroUso = true
 //        }
 //    }
-    
-    func clearUD(){
-//        UserDefaults.
-    }
-    
 }
