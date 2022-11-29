@@ -52,6 +52,15 @@ class GameViewModel: ObservableObject {
         prefsUserDefault.carregarMoedas()
     }
     
-    
+    public func trocarView(_ cenaAtual: SKScene, proxCena: SKScene, transicao: SKTransition? = nil){
+        if let transicao = transicao {
+            proxCena.scaleMode = .resizeFill
+            cenaAtual.view?.presentScene(proxCena, transition: transicao)
+        }
+        else {
+            proxCena.scaleMode = .resizeFill
+            cenaAtual.view?.presentScene(proxCena)
+        }
+    }
     
 }

@@ -20,6 +20,10 @@
 		2B9CA859292577F90020EB8E /* Container.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2B9CA857292577F90020EB8E /* Container.xcdatamodeld */; };
 		2BD89D3B292C0124005F06E9 /* PrefsUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD89D3A292C0124005F06E9 /* PrefsUserDefault.swift */; };
 		2BD89D3D292C1B55005F06E9 /* MausoleuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD89D3C292C1B55005F06E9 /* MausoleuView.swift */; };
+		82967C07292FE7EB00E80605 /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82967C06292FE7EB00E80605 /* ConfigView.swift */; };
+		82967C092930034700E80605 /* SobreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82967C082930034700E80605 /* SobreView.swift */; };
+		829FFB23293157E400602CD3 /* DireitosAutoraisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829FFB22293157E400602CD3 /* DireitosAutoraisView.swift */; };
+		829FFB25293158B300602CD3 /* PoliticaPrivacidadeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829FFB24293158B300602CD3 /* PoliticaPrivacidadeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,10 @@
 		2B9CA858292577F90020EB8E /* Container.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Container.xcdatamodel; sourceTree = "<group>"; };
 		2BD89D3A292C0124005F06E9 /* PrefsUserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefsUserDefault.swift; sourceTree = "<group>"; };
 		2BD89D3C292C1B55005F06E9 /* MausoleuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MausoleuView.swift; sourceTree = "<group>"; };
+		82967C06292FE7EB00E80605 /* ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
+		82967C082930034700E80605 /* SobreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SobreView.swift; sourceTree = "<group>"; };
+		829FFB22293157E400602CD3 /* DireitosAutoraisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DireitosAutoraisView.swift; sourceTree = "<group>"; };
+		829FFB24293158B300602CD3 /* PoliticaPrivacidadeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticaPrivacidadeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +130,10 @@
 				2B6C23F9292D65C8001C2F9C /* Templates */,
 				2B5EF04F292563360082F1F6 /* ContentView.swift */,
 				2B9B07AA2927F7E80096A50F /* GameScene.swift */,
+				82967C06292FE7EB00E80605 /* ConfigView.swift */,
+				82967C082930034700E80605 /* SobreView.swift */,
+				829FFB22293157E400602CD3 /* DireitosAutoraisView.swift */,
+				829FFB24293158B300602CD3 /* PoliticaPrivacidadeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -196,15 +208,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82967C07292FE7EB00E80605 /* ConfigView.swift in Sources */,
 				2B9B07AD2927FE3B0096A50F /* GameViewModel.swift in Sources */,
 				2B6C23FB292D65E8001C2F9C /* CovaView.swift in Sources */,
 				2B9B07AB2927F7E80096A50F /* GameScene.swift in Sources */,
 				0028E0D9292E8801008BFF1A /* BotaoNode.swift in Sources */,
 				2B5EF050292563360082F1F6 /* ContentView.swift in Sources */,
+				829FFB25293158B300602CD3 /* PoliticaPrivacidadeView.swift in Sources */,
 				2BD89D3B292C0124005F06E9 /* PrefsUserDefault.swift in Sources */,
 				00B11E4F292F7C8700766D3F /* HUDView.swift in Sources */,
 				2BD89D3D292C1B55005F06E9 /* MausoleuView.swift in Sources */,
+				829FFB23293157E400602CD3 /* DireitosAutoraisView.swift in Sources */,
 				2B9CA859292577F90020EB8E /* Container.xcdatamodeld in Sources */,
+				82967C092930034700E80605 /* SobreView.swift in Sources */,
 				2B9CA856292576E40020EB8E /* CoreDataManager.swift in Sources */,
 				2B5EF04E292563360082F1F6 /* MiniChallenge2App.swift in Sources */,
 			);

@@ -1,4 +1,4 @@
-//
+ //
 //  BotaoNode.swift
 //  MiniChallenge2
 //
@@ -9,22 +9,28 @@ import SpriteKit
 
 class BotaoNode: SKNode{
     var image: SKSpriteNode?
-    var action: (()->Void)?
+    var label: SKLabelNode?
+    var action: ((BotaoNode)->Void)?
     
-    init(image: SKSpriteNode, action: @escaping () -> Void) {
+    init(image: SKSpriteNode, label: SKLabelNode, action: @escaping (BotaoNode) -> Void) {
         self.image = image
+        self.label = label
         self.action = action
+        self.label?.horizontalAlignmentMode = .center
+        self.label?.verticalAlignmentMode = .center
         super.init()
         self.isUserInteractionEnabled = true
         
         self.addChild(image)
+        self.addChild(label)
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.action?()
+        self.action?(self)
     }
 }
