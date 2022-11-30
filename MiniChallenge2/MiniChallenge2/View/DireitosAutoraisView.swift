@@ -10,6 +10,7 @@ import SpriteKit
 
 class DireitosAutoraisView: SKScene {
     let screenWidth = UIScreen.main.bounds.size.width
+    let screenHeight = UIScreen.main.bounds.size.height
     
     class func direitosScene() -> DireitosAutoraisView {
         guard let scene = SKScene(fileNamed: "Direitos Autorais") as? DireitosAutoraisView else {
@@ -23,16 +24,26 @@ class DireitosAutoraisView: SKScene {
         super.sceneDidLoad()
         backgroundColor = .gray
         
-        let texto = SKLabelNode(fontNamed: "Chalkduster")
-        texto.text = """
-        @2022FANTASMINHA
+        let botaoVoltar = BotaoNode(image: SKSpriteNode(texture: SKTexture(image: UIImage(systemName: "chevron.backward")!)), label: .init(text: "")){ botao in
+            let scene: SKScene = ConfigView(size: self.size)
+            self.view?.presentScene(scene)
+        }
         
-        """
+        botaoVoltar.image?.size = CGSize(width: 12, height: 18)
+        botaoVoltar.position = CGPoint(x: (screenWidth/2)-155, y: screenHeight-100)
+        addChild(botaoVoltar)
+        
+        let texto = SKLabelNode(fontNamed: "Chalkduster")
+        texto.text = "@2022FANTASMINHA"
+        
         texto.fontSize = 15
         texto.horizontalAlignmentMode = .left
         texto.verticalAlignmentMode = .top
         texto.position = CGPoint(x: 20, y: 700)
-        texto.numberOfLines = 10
+        texto.lineBreakMode = NSLineBreakMode.byWordWrapping
+        texto.numberOfLines = 0
+        texto.preferredMaxLayoutWidth = screenWidth
+        
         addChild(texto)
     }
 }

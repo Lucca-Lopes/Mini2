@@ -26,6 +26,16 @@ class ConfigView: SKScene {
     
     override func didMove(to view: SKView) {
         
+        let botaoVoltar = BotaoNode(image: SKSpriteNode(texture: SKTexture(image: UIImage(systemName: "chevron.backward")!)), label: .init(text: "")){ botao in
+            let scene: SKScene = GameScene(size: self.size)
+            self.view?.presentScene(scene)
+        }
+        
+        botaoVoltar.image?.size = CGSize(width: 12, height: 18)
+        botaoVoltar.position = CGPoint(x: (screenWidth/2)-155, y: screenHeight-100)
+        botaoVoltar.zPosition = 1
+        addChild(botaoVoltar)
+        
         let botaoMusica = BotaoNode(
             image: SKSpriteNode(
                 texture: SKTexture(
@@ -44,7 +54,22 @@ class ConfigView: SKScene {
             botao.addChild(botao.image!)
         }
         
-        let botaoEfeitos = BotaoNode(image: SKSpriteNode(texture: SKTexture(image: UIImage(imageLiteralResourceName: "botaoEfeitosTicado"))), label: .init(text: " ")){ botao in
+        let botaoEfeitos = BotaoNode(
+            image: SKSpriteNode(
+                texture: SKTexture(
+                    image: UIImage(imageLiteralResourceName: self.audioAtivado ? "botaoEfeitosTicado" : "botaoEfeitos")
+                )
+            ),
+            label: .init(text: " ")
+        ){ botao in
+            self.trocarAudio()
+            botao.removeAllChildren()
+            botao.image = SKSpriteNode(
+                texture: SKTexture(
+                    image: UIImage(imageLiteralResourceName: self.audioAtivado ? "botaoEfeitosTicado" : "botaoEfeitos")
+                )
+            )
+            botao.addChild(botao.image!)
         }
         
         let botaoSobre = BotaoNode(image: SKSpriteNode(texture: SKTexture(image: UIImage(imageLiteralResourceName: "botaoSobre"))), label: .init(text: " ")){ botao in
