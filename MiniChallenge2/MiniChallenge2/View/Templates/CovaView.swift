@@ -13,12 +13,16 @@ public class CovaView: SKNode {
     let nome: String
     let cova: SKSpriteNode
     let fantasma: SKSpriteNode
+    let dinheiroGanho: Int
+
     var barraDeProgresso = BarraDeProgresso()
+
     
-    public init(posMausoleu: CGPoint, separador: CGFloat, nome: String){
+    public init(posMausoleu: CGPoint, separador: CGFloat, nome: String, ativo: Bool, dinheiroGanho: Int){
         self.posMausoleu = posMausoleu
         self.separador = separador
         self.nome = nome
+        self.dinheiroGanho = dinheiroGanho
         self.cova = SKSpriteNode(color: .lightGray, size: CGSize(width: 48, height: 115))
         
         self.cova.position = CGPoint(x: posMausoleu.x + separador, y: posMausoleu.y)
