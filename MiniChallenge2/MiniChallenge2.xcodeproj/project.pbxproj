@@ -55,7 +55,6 @@
 		2B5EF041292563360082F1F6 = {
 			isa = PBXGroup;
 			children = (
-				005E5254292FD01200185F8D /* BarraDeProgresso.swift */,
 				2B5EF04C292563360082F1F6 /* MiniChallenge2 */,
 				2B5EF04B292563360082F1F6 /* Products */,
 			);
@@ -94,6 +93,7 @@
 		2B6C23F9292D65C8001C2F9C /* Templates */ = {
 			isa = PBXGroup;
 			children = (
+				005E5254292FD01200185F8D /* BarraDeProgresso.swift */,
 				2BD89D3C292C1B55005F06E9 /* MausoleuView.swift */,
 				2B6C23FA292D65E8001C2F9C /* CovaView.swift */,
 				0028E0D8292E8801008BFF1A /* BotaoNode.swift */,
