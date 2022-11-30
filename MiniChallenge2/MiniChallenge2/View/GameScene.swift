@@ -54,12 +54,14 @@ class GameScene: SKScene{
         
         addChild(spriteMoeda)
         
+        addChild(HUDView())
         addChild(mausoleu1)
         addChild(mausoleu2)
         addChild(mausoleu3)
         addChild(mausoleu4)
         addChild(mausoleu5)
         addChild(mausoleu6)
+
     }
     
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -74,5 +76,6 @@ class GameScene: SKScene{
         vm.moedas+=covaTocada.dinheiroGanho
         textoMoedas.text = "\(vm.moedas)"
 //        print(vm.moedas)
+
     }
 }

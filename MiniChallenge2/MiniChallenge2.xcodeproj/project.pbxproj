@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0028E0D9292E8801008BFF1A /* BotaoNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0028E0D8292E8801008BFF1A /* BotaoNode.swift */; };
+		005E5255292FD01200185F8D /* BarraDeProgresso.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005E5254292FD01200185F8D /* BarraDeProgresso.swift */; };
+		00B11E4F292F7C8700766D3F /* HUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B11E4E292F7C8700766D3F /* HUDView.swift */; };
 		2B5EF04E292563360082F1F6 /* MiniChallenge2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5EF04D292563360082F1F6 /* MiniChallenge2App.swift */; };
 		2B5EF050292563360082F1F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5EF04F292563360082F1F6 /* ContentView.swift */; };
 		2B5EF052292563390082F1F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B5EF051292563390082F1F6 /* Assets.xcassets */; };
@@ -21,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0028E0D8292E8801008BFF1A /* BotaoNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotaoNode.swift; sourceTree = "<group>"; };
+		005E5254292FD01200185F8D /* BarraDeProgresso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarraDeProgresso.swift; sourceTree = "<group>"; };
+		00B11E4E292F7C8700766D3F /* HUDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDView.swift; sourceTree = "<group>"; };
 		2B5EF04A292563360082F1F6 /* MiniChallenge2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniChallenge2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B5EF04D292563360082F1F6 /* MiniChallenge2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniChallenge2App.swift; sourceTree = "<group>"; };
 		2B5EF04F292563360082F1F6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,8 +93,11 @@
 		2B6C23F9292D65C8001C2F9C /* Templates */ = {
 			isa = PBXGroup;
 			children = (
+				005E5254292FD01200185F8D /* BarraDeProgresso.swift */,
 				2BD89D3C292C1B55005F06E9 /* MausoleuView.swift */,
 				2B6C23FA292D65E8001C2F9C /* CovaView.swift */,
+				0028E0D8292E8801008BFF1A /* BotaoNode.swift */,
+				00B11E4E292F7C8700766D3F /* HUDView.swift */,
 			);
 			path = Templates;
 			sourceTree = "<group>";
@@ -193,8 +202,11 @@
 				2B9B07AD2927FE3B0096A50F /* GameViewModel.swift in Sources */,
 				2B6C23FB292D65E8001C2F9C /* CovaView.swift in Sources */,
 				2B9B07AB2927F7E80096A50F /* GameScene.swift in Sources */,
+				0028E0D9292E8801008BFF1A /* BotaoNode.swift in Sources */,
 				2B5EF050292563360082F1F6 /* ContentView.swift in Sources */,
 				2BD89D3B292C0124005F06E9 /* PrefsUserDefault.swift in Sources */,
+				005E5255292FD01200185F8D /* BarraDeProgresso.swift in Sources */,
+				00B11E4F292F7C8700766D3F /* HUDView.swift in Sources */,
 				2BD89D3D292C1B55005F06E9 /* MausoleuView.swift in Sources */,
 				2B9CA859292577F90020EB8E /* Container.xcdatamodeld in Sources */,
 				2B9CA856292576E40020EB8E /* CoreDataManager.swift in Sources */,
