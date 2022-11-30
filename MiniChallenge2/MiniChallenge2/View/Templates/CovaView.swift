@@ -13,6 +13,7 @@ public class CovaView: SKNode {
     let nome: String
     let cova: SKSpriteNode
     let fantasma: SKSpriteNode
+    var barraDeProgresso = BarraDeProgresso()
     
     public init(posMausoleu: CGPoint, separador: CGFloat, nome: String){
         self.posMausoleu = posMausoleu
@@ -27,10 +28,14 @@ public class CovaView: SKNode {
         self.fantasma.alpha = 0.7
         self.fantasma.position = self.cova.position
         
+        self.barraDeProgresso.position = CGPoint(x: self.fantasma.position.x, y: self.fantasma.position.y + self.cova.size.height/2)
+        self.barraDeProgresso.timer(tempo: 15)
+        
         super.init()
         
         self.addChild(self.cova)
         self.addChild(self.fantasma)
+        self.addChild(self.barraDeProgresso)
     }
     
     required init?(coder aDecoder: NSCoder) {
