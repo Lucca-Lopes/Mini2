@@ -37,7 +37,7 @@ class BarraDeProgresso: SKNode{
         
         barra.run(.sequence([
             .wait(forDuration: 1),
-            diminuiContagem,
+            diminuiContagem
         ]))
     }
     
