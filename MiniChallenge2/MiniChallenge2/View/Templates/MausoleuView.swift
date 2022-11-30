@@ -11,7 +11,7 @@ public class MausoleuView: SKNode {
     let screenWidth = UIScreen.main.bounds.size.width
     let screenHeight = UIScreen.main.bounds.size.height
     
-    public init(posMausoleu: CGPoint, nome: String, ativo: Bool, cova1Ativa: Bool, cova2Ativa: Bool, dinheiroGanho: Int) {
+    public init(posMausoleu: CGPoint, nome: String, ativo: Bool, cova1Ativa: Bool, cova2Ativa: Bool, dinheiroGanho: Int, tempoCova: CGFloat) {
         let separador = CGFloat((131/4)-2)
         let AreaMausoleu = SKSpriteNode(color: .gray, size: CGSize(width: 131, height: 142))
         let x = (screenWidth / 2) / 2
@@ -21,8 +21,8 @@ public class MausoleuView: SKNode {
         super.init()
         
         self.addChild(AreaMausoleu)
-        AreaMausoleu.addChild(CovaView(posMausoleu: CGPoint.zero, separador: separador, nome: nome, ativo: cova1Ativa, dinheiroGanho: dinheiroGanho))
-        AreaMausoleu.addChild(CovaView(posMausoleu: CGPoint.zero, separador: -separador, nome: nome, ativo: cova2Ativa, dinheiroGanho: dinheiroGanho))
+        AreaMausoleu.addChild(CovaView(posMausoleu: CGPoint.zero, separador: separador, nome: nome, ativo: cova1Ativa, dinheiroGanho: dinheiroGanho, tempo: tempoCova))
+        AreaMausoleu.addChild(CovaView(posMausoleu: CGPoint.zero, separador: -separador, nome: nome, ativo: cova2Ativa, dinheiroGanho: dinheiroGanho, tempo: tempoCova))
         
     }
     
