@@ -14,6 +14,7 @@ class ConfigView: SKScene {
     let vm = GameViewModel()
     var background = SKSpriteNode(imageNamed: "backgroundConfig")
     var audioAtivado = true
+    var audioPlayer: AVAudioPlayer?
     
     
     class func configScene() -> ConfigView {
@@ -113,5 +114,6 @@ class ConfigView: SKScene {
     
     func trocarAudio(){
         audioAtivado = !audioAtivado
+        self.audioPlayer?.play()
     }
 }

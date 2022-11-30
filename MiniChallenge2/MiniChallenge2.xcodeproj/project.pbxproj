@@ -25,6 +25,7 @@
 		829FFB23293157E400602CD3 /* DireitosAutoraisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829FFB22293157E400602CD3 /* DireitosAutoraisView.swift */; };
 		829FFB25293158B300602CD3 /* PoliticaPrivacidadeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829FFB24293158B300602CD3 /* PoliticaPrivacidadeView.swift */; };
 		A7A0F28F2937C85B00D11077 /* Audios in Resources */ = {isa = PBXBuildFile; fileRef = A7A0F28E2937C85B00D11077 /* Audios */; };
+		A7A0F2912937EB8F00D11077 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0F2902937EB8F00D11077 /* Audio.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		829FFB22293157E400602CD3 /* DireitosAutoraisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DireitosAutoraisView.swift; sourceTree = "<group>"; };
 		829FFB24293158B300602CD3 /* PoliticaPrivacidadeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticaPrivacidadeView.swift; sourceTree = "<group>"; };
 		A7A0F28E2937C85B00D11077 /* Audios */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Audios; path = ../../../../../../Desktop/Audios; sourceTree = "<group>"; };
+		A7A0F2902937EB8F00D11077 /* Audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				2B9B07AC2927FE3B0096A50F /* GameViewModel.swift */,
+				A7A0F2902937EB8F00D11077 /* Audio.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				2B5EF050292563360082F1F6 /* ContentView.swift in Sources */,
 				829FFB25293158B300602CD3 /* PoliticaPrivacidadeView.swift in Sources */,
 				2BD89D3B292C0124005F06E9 /* PrefsUserDefault.swift in Sources */,
+				A7A0F2912937EB8F00D11077 /* Audio.swift in Sources */,
 				00B11E4F292F7C8700766D3F /* HUDView.swift in Sources */,
 				2BD89D3D292C1B55005F06E9 /* MausoleuView.swift in Sources */,
 				829FFB23293157E400602CD3 /* DireitosAutoraisView.swift in Sources */,
