@@ -34,7 +34,7 @@ class DireitosAutoraisView: SKScene {
         addChild(botaoVoltar)
         
         let texto = SKLabelNode(fontNamed: "Chalkduster")
-        texto.text = "@2022FANTASMINHA"
+        texto.text = "@2022FANTASMINHA. Todos os direitos reservados a seus criadores: Larissa Teixeira, Caroline Stelitano, Lucca Lopes e Rodrigo Pereira. Direitos relacionados a música The Foyer, de PlayOnLoop.com, são licensiados por Creative Commons by Attribution 4.0."
         
         texto.fontSize = 15
         texto.horizontalAlignmentMode = .left
@@ -42,7 +42,7 @@ class DireitosAutoraisView: SKScene {
         texto.position = CGPoint(x: 20, y: 700)
         texto.lineBreakMode = NSLineBreakMode.byWordWrapping
         texto.numberOfLines = 0
-        texto.preferredMaxLayoutWidth = screenWidth
+        texto.preferredMaxLayoutWidth = screenWidth-20
         
         addChild(texto)
     }

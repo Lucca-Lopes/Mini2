@@ -33,8 +33,7 @@ class SobreView: SKScene {
         addChild(botaoVoltar)
         
         let texto = SKLabelNode(fontNamed: "Chalkduster")
-//        let texto = self.childNode(withName: "label") as? SKLabelNode
-        texto.text = "Fantasminha é um jogo estilo comfort games para todas as idades."
+        texto.text = "Fantasminha é um jogo estilo comfort games para todas as idades. Colete as moedas, desbloqueie novas áreas e seus fantasmas e se divirta nessa aventura fantasmagórica."
         
         texto.fontSize = 15
         texto.horizontalAlignmentMode = .left
@@ -42,7 +41,7 @@ class SobreView: SKScene {
         texto.position = CGPoint(x: 20, y: 700)
         texto.lineBreakMode = NSLineBreakMode.byWordWrapping
         texto.numberOfLines = 0
-        texto.preferredMaxLayoutWidth = screenWidth
+        texto.preferredMaxLayoutWidth = screenWidth-20
         
         addChild(texto)
     }

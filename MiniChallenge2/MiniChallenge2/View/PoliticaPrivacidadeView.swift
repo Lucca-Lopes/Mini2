@@ -42,7 +42,7 @@ class PoliticaPrivacidadeView: SKScene {
         texto.position = CGPoint(x: 20, y: 700)
         texto.lineBreakMode = NSLineBreakMode.byWordWrapping
         texto.numberOfLines = 0
-        texto.preferredMaxLayoutWidth = screenWidth
+        texto.preferredMaxLayoutWidth = screenWidth-20
         
         addChild(texto)
     }
