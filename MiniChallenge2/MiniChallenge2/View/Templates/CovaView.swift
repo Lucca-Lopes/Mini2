@@ -26,7 +26,7 @@ public class CovaView: SKNode {
         self.barraDeProgresso = BarraDeProgresso(tempo: tempo)
         self.ativo = ativo
         self.preco = preco
-        self.cova = SKSpriteNode(imageNamed: (ativo ? "Terrinha" : "Cova"))
+        self.cova = SKSpriteNode(imageNamed: "Cova")
         
         self.cova.position = CGPoint(x: posMausoleu.x + separador, y: posMausoleu.y)
         self.cova.size = CGSize(width: self.cova.size.width * 0.25, height: self.cova.size.height * 0.25)
@@ -34,16 +34,22 @@ public class CovaView: SKNode {
         self.fantasma = SKSpriteNode(imageNamed: nome)
         self.fantasma.size = CGSize(width: self.fantasma.size.width * 0.08, height: self.fantasma.size.height * 0.08)
         self.fantasma.alpha = 0.7
-        self.fantasma.position = self.cova.position
+        self.fantasma.position = CGPoint(x: self.cova.position.x, y: self.cova.position.y - 15)
         
         self.barraDeProgresso.position = CGPoint(x: self.fantasma.position.x, y: self.fantasma.position.y + self.fantasma.size.height * 0.6)
-        self.barraDeProgresso.timer()
+        if ativo {
+            self.barraDeProgresso.timer()
+        }
+        
         
         super.init()
         
-        self.addChild(self.cova)
-        self.addChild(self.fantasma)
-        self.addChild(self.barraDeProgresso)
+        if ativo {
+            self.addChild(self.cova)
+            self.addChild(self.fantasma)
+            self.addChild(self.barraDeProgresso)
+        }
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
