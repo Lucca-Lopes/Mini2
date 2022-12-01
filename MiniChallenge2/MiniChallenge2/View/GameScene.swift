@@ -29,7 +29,7 @@ class GameScene: SKScene{
         // TODO: verificar se ao entrar na tela de config e retornar está zerando o estado do jogo!!! Esse codigo nao devia estar na DidLoad??
         backgroundColor = .systemGray6
         
-        let infoButton = BotaoNode(image: SKSpriteNode(texture: SKTexture(image: UIImage(systemName: "info.circle")!)), label: .init(text: "")){ botao in
+        let infoButton = BotaoNode(image: SKSpriteNode(texture: SKTexture(image: UIImage(imageLiteralResourceName: "engrenagem"))), label: .init(text: "")){ botao in
             let scene: SKScene = ConfigView(size: self.size)
             self.view?.presentScene(scene)
         }
