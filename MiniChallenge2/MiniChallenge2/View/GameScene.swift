@@ -63,5 +63,9 @@ class GameScene: SKScene{
             covaTocada.barraDeProgresso.timer()
             print("clicou em \(covaTocada.nome)")
         }
+        
+        if !covaTocada.ativo{
+            
+        }
     }
 }
