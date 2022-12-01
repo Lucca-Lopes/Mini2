@@ -45,4 +45,7 @@ class GameViewModel: ObservableObject {
     public func salvarCovas(){
         prefsUserDefault.userDefaults.setValue(covas, forKey: "covas")
     }
+    
+    
+    
 }

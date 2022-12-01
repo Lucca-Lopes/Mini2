@@ -43,9 +43,9 @@ public class CovaView: SKNode {
         
         
         super.init()
+        self.addChild(self.cova)
         
         if ativo{
-            self.addChild(self.cova)
             self.addChild(self.fantasma)
             self.addChild(self.barraDeProgresso)
         }

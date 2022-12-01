@@ -25,6 +25,7 @@ class GameScene: SKScene{
         infoButton.position = CGPoint(x: screenWidth-55, y: screenHeight-100)
         
         textoMoedas = SKLabelNode(text: "\(vm.moedas)")
+        textoMoedas.fontName = "Impact"
         textoMoedas.horizontalAlignmentMode = .left
         textoMoedas.verticalAlignmentMode = .center
         textoMoedas.fontSize = 42
@@ -116,7 +117,7 @@ class GameScene: SKScene{
         }
         
         if !covaTocada.ativo{
-            
+            addChild(MenuCompra(cova: covaTocada, vm: vm))
         }
     }
 }
