@@ -6,7 +6,6 @@
 //
 
 import SpriteKit
-import AVFAudio
 
 class ConfigView: SKScene {
     let screenWidth = UIScreen.main.bounds.size.width
@@ -14,22 +13,22 @@ class ConfigView: SKScene {
     let vm = GameViewModel()
     var background = SKSpriteNode(imageNamed: "backgroundConfig")
     var audioAtivado = true
-    var audioPlayer: AVAudioPlayer?
     
     
-    class func configScene() -> ConfigView {
-        guard let scene = SKScene(fileNamed: "Configuracao") as? ConfigView else {
-            abort()
-        }
-        scene.scaleMode = .resizeFill
-        return scene
-    }
+//    class func configScene() -> ConfigView {
+//        guard let scene = SKScene(fileNamed: "Configuracao") as? ConfigView else {
+//            abort()
+//        }
+//        scene.scaleMode = .resizeFill
+//        return scene
+//    }
     
-    override func didMove(to view: SKView) {
+    override
+    func sceneDidLoad() {
+        SceneController.configScene = self
         
         let botaoVoltar = BotaoNode(image: SKSpriteNode(texture: SKTexture(image: UIImage(systemName: "chevron.backward")!)), label: .init(text: "")){ botao in
-            let scene: SKScene = GameScene(size: self.size)
-            self.view?.presentScene(scene)
+            self.view?.presentScene(SceneController.gameScene)
         }
         
         botaoVoltar.image?.size = CGSize(width: 12, height: 18)
@@ -111,9 +110,10 @@ class ConfigView: SKScene {
         addChild(background)
     }
     
+    override func didMove(to view: SKView) {
+    }
     
     func trocarAudio(){
         audioAtivado = !audioAtivado
-        self.audioPlayer?.play()
     }
 }

@@ -13,16 +13,24 @@ class GameScene: SKScene{
     let vm = GameViewModel()
     let screenWidth = UIScreen.main.bounds.size.width
     let screenHeight = UIScreen.main.bounds.size.height
+    var musicPlayer: AVAudioPlayer?
     
-    func configScene() -> ConfigView {
-        guard let scene = SKScene(fileNamed: "Configuracao") as? ConfigView else {
-            abort()
-        }
-        scene.scaleMode = .resizeFill
-        return scene
+//    func configScene() -> ConfigView {
+//        guard let scene = SKScene(fileNamed: "ConfigView") as? ConfigView else {
+//            abort()
+//        }
+//        scene.scaleMode = .resizeFill
+//        return scene
+//    }
+    
+    override
+    func sceneDidLoad() {
+        SceneController.gameScene = self
+        self.playMusic()
     }
     
     override func didMove(to view: SKView) {
+        // TODO: verificar se ao entrar na tela de config e retornar está zerando o estado do jogo!!!
         backgroundColor = .systemGray6
         
         let infoButton = BotaoNode(image: SKSpriteNode(texture: SKTexture(image: UIImage(systemName: "info.circle")!)), label: .init(text: "")){ botao in
@@ -50,5 +58,19 @@ class GameScene: SKScene{
         addChild(mausoleu5)
         addChild(mausoleu6)
         addChild(infoButton)
+    }
+    
+    func playMusic() {
+        do {
+            self.musicPlayer = try AVAudioPlayer(contentsOf: Audio.musicaFundo)
+            self.musicPlayer?.numberOfLoops = -1
+            self.musicPlayer?.play()
+        } catch {
+            print("Erro ao reproduzir som.")
+        }
+    }
+    
+    func stopMusic() {
+        self.musicPlayer?.stop()
     }
 }

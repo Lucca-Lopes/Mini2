@@ -5,22 +5,16 @@
 //  Created by Caroline Stelitano on 30/11/22.
 //
 
-import AVFoundation
 import AVKit
 
 struct Audio {
-    let musicaFundo : URL
-    let efeitoMoeda : URL
+    static let musicaFundo : URL = Bundle.main.url(
+        forResource: "gameThemeTheFoyer",
+        withExtension: "wav"
+    )!
     
-    struct Musica {
-        let url = Bundle.main.url(forResource: "gameThemeTheFoyer", withExtension: "wav")
-//        let musicaFundo = AVAudioPlayer(contentsOf: URL)
-    }
-    
-    struct Efeito {
-        let efeitoMoeda = Bundle.main.url(forResource: "gameThemeTheFoyer", withExtension: "wav")
-    }
+    static let efeitoMoeda : URL = Bundle.main.url(
+        forResource: "gameThemeTheFoyer",
+        withExtension: "wav"
+    )!
 }
-
-
-

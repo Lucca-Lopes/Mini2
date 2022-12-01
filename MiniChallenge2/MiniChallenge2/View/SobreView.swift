@@ -11,13 +11,13 @@ class SobreView: SKScene {
     let screenWidth = UIScreen.main.bounds.size.width
     let screenHeight = UIScreen.main.bounds.size.height
     
-    class func sobreScene() -> SobreView {
-        guard let scene = SKScene(fileNamed: "Sobre") as? SobreView else {
-            abort()
-        }
-        scene.scaleMode = .resizeFill
-        return scene
-    }
+//    class func sobreScene() -> SobreView {
+//        guard let scene = SKScene(fileNamed: "Sobre") as? SobreView else {
+//            abort()
+//        }
+//        scene.scaleMode = .resizeFill
+//        return scene
+//    }
     
     override func sceneDidLoad() {
         super.sceneDidLoad()
