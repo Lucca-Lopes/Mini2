@@ -13,15 +13,9 @@ struct Audio {
     
     private static let keyEfeitosAtivados : String = "efeitosAtivados"
     
-    static let musicaFundo : URL = Bundle.main.url(
-        forResource: "gameThemeTheFoyer",
-        withExtension: "wav"
-    )!
+    static let musicaFundo : URL = Bundle.main.url(forResource: "gameThemeTheFoyer", withExtension: "wav")!
     
-    static let efeitoMoeda : URL = Bundle.main.url(
-        forResource: "gameThemeTheFoyer",
-        withExtension: "wav"
-    )!
+    static let efeitoMoeda : URL = Bundle.main.url(forResource: "coin", withExtension: "m4a")!
     
     static func inicializarValoresPadrao() -> Void {
         UserDefaults.standard.register(defaults: [

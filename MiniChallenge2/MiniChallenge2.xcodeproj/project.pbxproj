@@ -22,6 +22,7 @@
 		2BD89D3D292C1B55005F06E9 /* MausoleuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD89D3C292C1B55005F06E9 /* MausoleuView.swift */; };
 		46C7581A29381F1C00414550 /* gameThemeTheFoyer.wav in Resources */ = {isa = PBXBuildFile; fileRef = 46C7581929381F1C00414550 /* gameThemeTheFoyer.wav */; };
 		46C7581C2938261A00414550 /* SceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C7581B2938261A00414550 /* SceneController.swift */; };
+		46C7581E2938398100414550 /* coin.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 46C7581D2938398100414550 /* coin.m4a */; };
 		82967C07292FE7EB00E80605 /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82967C06292FE7EB00E80605 /* ConfigView.swift */; };
 		82967C092930034700E80605 /* SobreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82967C082930034700E80605 /* SobreView.swift */; };
 		829FFB23293157E400602CD3 /* DireitosAutoraisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829FFB22293157E400602CD3 /* DireitosAutoraisView.swift */; };
@@ -46,6 +47,7 @@
 		2BD89D3C292C1B55005F06E9 /* MausoleuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MausoleuView.swift; sourceTree = "<group>"; };
 		46C7581929381F1C00414550 /* gameThemeTheFoyer.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = gameThemeTheFoyer.wav; sourceTree = "<group>"; };
 		46C7581B2938261A00414550 /* SceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneController.swift; sourceTree = "<group>"; };
+		46C7581D2938398100414550 /* coin.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = coin.m4a; sourceTree = "<group>"; };
 		82967C06292FE7EB00E80605 /* ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
 		82967C082930034700E80605 /* SobreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SobreView.swift; sourceTree = "<group>"; };
 		829FFB22293157E400602CD3 /* DireitosAutoraisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DireitosAutoraisView.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 		46C7581829381F0F00414550 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				46C7581D2938398100414550 /* coin.m4a */,
 				46C7581929381F1C00414550 /* gameThemeTheFoyer.wav */,
 			);
 			path = Audio;
@@ -214,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B5EF055292563390082F1F6 /* Preview Assets.xcassets in Resources */,
+				46C7581E2938398100414550 /* coin.m4a in Resources */,
 				46C7581A29381F1C00414550 /* gameThemeTheFoyer.wav in Resources */,
 				2B5EF052292563390082F1F6 /* Assets.xcassets in Resources */,
 			);

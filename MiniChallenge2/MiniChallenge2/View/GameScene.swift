@@ -14,6 +14,7 @@ class GameScene: SKScene{
     let screenWidth = UIScreen.main.bounds.size.width
     let screenHeight = UIScreen.main.bounds.size.height
     var musicPlayer: AVAudioPlayer?
+    var coinPlayer: AVAudioPlayer?
     
 //    func configScene() -> ConfigView {
 //        guard let scene = SKScene(fileNamed: "ConfigView") as? ConfigView else {
@@ -71,6 +72,13 @@ class GameScene: SKScene{
         }
     }
     
+    func decidirSeTocaMoeda() {
+        let efeitosAtivados = Audio.pegarEfeitosAtivados()
+        if (efeitosAtivados) {
+            playCoin()
+        }
+    }
+    
     private func playMusic() {
         do {
             self.musicPlayer = try AVAudioPlayer(contentsOf: Audio.musicaFundo)
@@ -83,5 +91,21 @@ class GameScene: SKScene{
     
     private func stopMusic() {
         self.musicPlayer?.stop()
+    }
+    
+    private func playCoin() {
+        do {
+            if (self.coinPlayer == nil) {
+                self.coinPlayer = try AVAudioPlayer(contentsOf: Audio.efeitoMoeda)
+            }
+            self.coinPlayer?.play()
+        } catch {
+            print("Erro ao reproduzir som.")
+        }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        // TODO: Para testar efeitos sonoros - mover pro lugar correto
+        decidirSeTocaMoeda()
     }
 }
