@@ -16,13 +16,6 @@ class GameScene: SKScene{
     var musicPlayer: AVAudioPlayer?
     var coinPlayer: AVAudioPlayer?
     
-//    func configScene() -> ConfigView {
-//        guard let scene = SKScene(fileNamed: "ConfigView") as? ConfigView else {
-//            abort()
-//        }
-//        scene.scaleMode = .resizeFill
-//        return scene
-//    }
     
     override
     func sceneDidLoad() {
@@ -33,7 +26,7 @@ class GameScene: SKScene{
     }
     
     override func didMove(to view: SKView) {
-        // TODO: verificar se ao entrar na tela de config e retornar está zerando o estado do jogo!!!
+        // TODO: verificar se ao entrar na tela de config e retornar está zerando o estado do jogo!!! Esse codigo nao devia estar na DidLoad??
         backgroundColor = .systemGray6
         
         let infoButton = BotaoNode(image: SKSpriteNode(texture: SKTexture(image: UIImage(systemName: "info.circle")!)), label: .init(text: "")){ botao in

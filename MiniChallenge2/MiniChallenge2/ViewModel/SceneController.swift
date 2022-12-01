@@ -10,13 +10,5 @@ import Foundation
 struct SceneController {
     
     static var gameScene: GameScene?
-    
     static var configScene: ConfigView?
-    
-    static var sobre: SobreView?
-    
-    static var politica: PoliticaPrivacidadeView?
-    
-    static var direitos: DireitosAutoraisView?
-    
 }

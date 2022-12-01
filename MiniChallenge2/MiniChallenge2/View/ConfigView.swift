@@ -16,14 +16,6 @@ class ConfigView: SKScene {
     var efeitosAtivados = Audio.pegarEfeitosAtivados()
     
     
-//    class func configScene() -> ConfigView {
-//        guard let scene = SKScene(fileNamed: "Configuracao") as? ConfigView else {
-//            abort()
-//        }
-//        scene.scaleMode = .resizeFill
-//        return scene
-//    }
-    
     override
     func sceneDidLoad() {
         SceneController.configScene = self
