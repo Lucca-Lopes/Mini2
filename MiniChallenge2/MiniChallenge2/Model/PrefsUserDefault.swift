@@ -26,8 +26,6 @@ class PrefsUserDefault {
         carregarMoedas()
         carregarMausoleus()
         carregarCovas()
-        print(mausoleus)
-        print(covas)
     }
     
     func carregarMoedas(){

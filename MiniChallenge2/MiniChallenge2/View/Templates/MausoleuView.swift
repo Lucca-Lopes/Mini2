@@ -10,19 +10,22 @@ import SpriteKit
 public class MausoleuView: SKNode {
     let screenWidth = UIScreen.main.bounds.size.width
     let screenHeight = UIScreen.main.bounds.size.height
+    var AreaMausoleu: SKSpriteNode
     var ativo: Bool
+    var preco: Int
     
-    public init(posMausoleu: CGPoint, nome: String, ativo: Bool, cova1Ativa: Bool, cova2Ativa: Bool, dinheiroGanho: Int, tempoCova: CGFloat) {
+    public init(posMausoleu: CGPoint, nome: String, ativo: Bool, cova1Ativa: Bool, cova2Ativa: Bool, dinheiroGanho: Int, tempoCova: CGFloat, precoMausoleu: Int, precoCova: Int) {
+        self.preco = precoMausoleu
         self.ativo = ativo
         let separador = CGFloat((131/4)-2)
-        var AreaMausoleu: SKSpriteNode
-        if !ativo {
-            AreaMausoleu = SKSpriteNode(imageNamed: "CovaVazia")
-            AreaMausoleu.size = CGSize(width: AreaMausoleu.size.width * 0.3, height: AreaMausoleu.size.height * 0.3)
+        
+        if ativo {
+            AreaMausoleu = SKSpriteNode(imageNamed: "MausoleuComprado")
         }
         else {
-            AreaMausoleu = SKSpriteNode(color: .gray, size: CGSize(width: 131, height: 142))
+            AreaMausoleu = SKSpriteNode(imageNamed: "MausoleuVazio")
         }
+        AreaMausoleu.size = CGSize(width: AreaMausoleu.size.width * 0.3, height: AreaMausoleu.size.height * 0.3)
         let x = (screenWidth / 2) / 2
         let y = (screenHeight * posMausoleu.y)
         AreaMausoleu.position = CGPoint(x: x * posMausoleu.x, y: y)
@@ -30,8 +33,8 @@ public class MausoleuView: SKNode {
         super.init()
         
         self.addChild(AreaMausoleu)
-        AreaMausoleu.addChild(CovaView(posMausoleu: CGPoint.zero, separador: separador, nome: nome, ativo: cova1Ativa, dinheiroGanho: dinheiroGanho, tempo: tempoCova))
-        AreaMausoleu.addChild(CovaView(posMausoleu: CGPoint.zero, separador: -separador, nome: nome, ativo: cova2Ativa, dinheiroGanho: dinheiroGanho, tempo: tempoCova))
+        AreaMausoleu.addChild(CovaView(posMausoleu: CGPoint.zero, separador: separador, nome: nome, ativo: cova1Ativa, dinheiroGanho: dinheiroGanho, tempo: tempoCova, preco: precoCova))
+        AreaMausoleu.addChild(CovaView(posMausoleu: CGPoint.zero, separador: -separador, nome: nome, ativo: cova2Ativa, dinheiroGanho: dinheiroGanho, tempo: tempoCova, preco: precoCova))
         
     }
     

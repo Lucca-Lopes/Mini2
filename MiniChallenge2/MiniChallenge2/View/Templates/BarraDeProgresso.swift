@@ -50,7 +50,6 @@ class BarraDeProgresso: SKNode{
         addChild(barra)
         barra.zPosition += 5
         barra.anchorPoint = .init(x: 0, y: 0.5)
-//        barra.position.x = -(barra.size.width/2)
         barra.position.x = bordaInterna.position.x - bordaInterna.size.width/2
     }
 }
