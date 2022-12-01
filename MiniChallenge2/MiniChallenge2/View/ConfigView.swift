@@ -12,7 +12,8 @@ class ConfigView: SKScene {
     let screenHeight = UIScreen.main.bounds.size.height
     let vm = GameViewModel()
     var background = SKSpriteNode(imageNamed: "backgroundConfig")
-    var audioAtivado = true
+    var musicaAtivada = Audio.pegarMusicaAtivada()
+    var efeitosAtivados = Audio.pegarEfeitosAtivados()
     
     
 //    class func configScene() -> ConfigView {
@@ -39,16 +40,16 @@ class ConfigView: SKScene {
         let botaoMusica = BotaoNode(
             image: SKSpriteNode(
                 texture: SKTexture(
-                    image: UIImage(imageLiteralResourceName: self.audioAtivado ? "botaoMusicaTicado" : "botaoMusica")
+                    image: UIImage(imageLiteralResourceName: self.musicaAtivada ? "botaoMusicaTicado" : "botaoMusica")
                 )
             ),
             label: .init(text: " ")
         ){ botao in
-            self.trocarAudio()
+            self.toggleMusicaAtivada()
             botao.removeAllChildren()
             botao.image = SKSpriteNode(
                 texture: SKTexture(
-                    image: UIImage(imageLiteralResourceName: self.audioAtivado ? "botaoMusicaTicado" : "botaoMusica")
+                    image: UIImage(imageLiteralResourceName: self.musicaAtivada ? "botaoMusicaTicado" : "botaoMusica")
                 )
             )
             botao.addChild(botao.image!)
@@ -57,16 +58,16 @@ class ConfigView: SKScene {
         let botaoEfeitos = BotaoNode(
             image: SKSpriteNode(
                 texture: SKTexture(
-                    image: UIImage(imageLiteralResourceName: self.audioAtivado ? "botaoEfeitosTicado" : "botaoEfeitos")
+                    image: UIImage(imageLiteralResourceName: self.efeitosAtivados ? "botaoEfeitosTicado" : "botaoEfeitos")
                 )
             ),
             label: .init(text: " ")
         ){ botao in
-            self.trocarAudio()
+            self.toggleEfeitosAtivados()
             botao.removeAllChildren()
             botao.image = SKSpriteNode(
                 texture: SKTexture(
-                    image: UIImage(imageLiteralResourceName: self.audioAtivado ? "botaoEfeitosTicado" : "botaoEfeitos")
+                    image: UIImage(imageLiteralResourceName: self.efeitosAtivados ? "botaoEfeitosTicado" : "botaoEfeitos")
                 )
             )
             botao.addChild(botao.image!)
@@ -113,7 +114,14 @@ class ConfigView: SKScene {
     override func didMove(to view: SKView) {
     }
     
-    func trocarAudio(){
-        audioAtivado = !audioAtivado
+    func toggleMusicaAtivada(){
+        musicaAtivada = !musicaAtivada
+        Audio.salvarMusicaAtivada(valor: musicaAtivada)
+        SceneController.gameScene?.decidirSeTocaMusica()
+    }
+    
+    func toggleEfeitosAtivados(){
+        efeitosAtivados = !efeitosAtivados
+        Audio.salvarEfeitosAtivados(valor: efeitosAtivados)
     }
 }

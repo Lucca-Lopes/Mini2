@@ -26,7 +26,9 @@ class GameScene: SKScene{
     override
     func sceneDidLoad() {
         SceneController.gameScene = self
-        self.playMusic()
+        
+        Audio.inicializarValoresPadrao()
+        self.decidirSeTocaMusica()
     }
     
     override func didMove(to view: SKView) {
@@ -60,7 +62,16 @@ class GameScene: SKScene{
         addChild(infoButton)
     }
     
-    func playMusic() {
+    func decidirSeTocaMusica() {
+        let musicaAtivada = Audio.pegarMusicaAtivada()
+        if (musicaAtivada) {
+            playMusic()
+        } else {
+            stopMusic()
+        }
+    }
+    
+    private func playMusic() {
         do {
             self.musicPlayer = try AVAudioPlayer(contentsOf: Audio.musicaFundo)
             self.musicPlayer?.numberOfLoops = -1
@@ -70,7 +81,7 @@ class GameScene: SKScene{
         }
     }
     
-    func stopMusic() {
+    private func stopMusic() {
         self.musicPlayer?.stop()
     }
 }
