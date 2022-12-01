@@ -6,15 +6,36 @@
 //
 
 import SpriteKit
+import AVFAudio
 
 class GameScene: SKScene{
     
     let vm = GameViewModel()
+    let screenWidth = UIScreen.main.bounds.size.width
+    let screenHeight = UIScreen.main.bounds.size.height
+    var musicPlayer: AVAudioPlayer?
+    var coinPlayer: AVAudioPlayer?
     var textoMoedas: SKLabelNode = SKLabelNode()
     
+    override
+    func sceneDidLoad() {
+        SceneController.gameScene = self
+        
+        Audio.inicializarValoresPadrao()
+        self.decidirSeTocaMusica()
+    }
+        
     override func didMove(to view: SKView) {
+        // TODO: verificar se ao entrar na tela de config e retornar está zerando o estado do jogo!!! Esse codigo nao devia estar na DidLoad??
         backgroundColor = .systemGray6
         
+        let infoButton = BotaoNode(image: SKSpriteNode(texture: SKTexture(image: UIImage(imageLiteralResourceName: "engrenagem"))), label: .init(text: "")){ botao in
+            let scene: SKScene = ConfigView(size: self.size)
+            self.view?.presentScene(scene)
+        }
+        
+        infoButton.image?.size = CGSize(width: 35, height: 35)
+        infoButton.position = CGPoint(x: screenWidth-55, y: screenHeight-100)
         textoMoedas = SKLabelNode(text: "\(vm.moedas)")
         textoMoedas.horizontalAlignmentMode = .left
         textoMoedas.verticalAlignmentMode = .center
@@ -46,6 +67,53 @@ class GameScene: SKScene{
         addChild(mausoleu4)
         addChild(mausoleu5)
         addChild(mausoleu6)
+        addChild(infoButton)
+    }
+    
+    func decidirSeTocaMusica() {
+        let musicaAtivada = Audio.pegarMusicaAtivada()
+        if (musicaAtivada) {
+            playMusic()
+        } else {
+            stopMusic()
+        }
+    }
+    
+    func decidirSeTocaMoeda() {
+        let efeitosAtivados = Audio.pegarEfeitosAtivados()
+        if (efeitosAtivados) {
+            playCoin()
+        }
+    }
+    
+    private func playMusic() {
+        do {
+            self.musicPlayer = try AVAudioPlayer(contentsOf: Audio.musicaFundo)
+            self.musicPlayer?.numberOfLoops = -1
+            self.musicPlayer?.play()
+        } catch {
+            print("Erro ao reproduzir som.")
+        }
+    }
+    
+    private func stopMusic() {
+        self.musicPlayer?.stop()
+    }
+    
+    private func playCoin() {
+        do {
+            if (self.coinPlayer == nil) {
+                self.coinPlayer = try AVAudioPlayer(contentsOf: Audio.efeitoMoeda)
+            }
+            self.coinPlayer?.play()
+        } catch {
+            print("Erro ao reproduzir som.")
+        }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        // TODO: Para testar efeitos sonoros - mover pro lugar correto
+        decidirSeTocaMoeda()
     }
     
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
