@@ -44,12 +44,11 @@ public class CovaView: SKNode {
         
         super.init()
         
-        if ativo {
+        if ativo{
             self.addChild(self.cova)
             self.addChild(self.fantasma)
             self.addChild(self.barraDeProgresso)
         }
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -57,7 +56,10 @@ public class CovaView: SKNode {
     }
     
     public func ativarCova(){
-        
+        ativo = true
+        addChild(cova)
+        addChild(fantasma)
+        addChild(barraDeProgresso)
     }
     
 }
