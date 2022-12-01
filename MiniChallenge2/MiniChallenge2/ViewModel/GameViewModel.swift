@@ -11,45 +11,20 @@ import SpriteKit
 
 class GameViewModel: ObservableObject {
     
-    let manager = CoreDataManager.instance
     let prefsUserDefault = PrefsUserDefault()
     
-    let screenWidth = UIScreen.main.bounds.size.width
-    let screenHeight = UIScreen.main.bounds.size.height
-    
-    let defaults = UserDefaults.standard
-    
-    @Published var covas: [Cova] = []
-    @Published var mausoleus: [Mausoleu] = []
+    @Published var moedas: Int = 0
+    @Published var mausoleus: [Bool] = []
+    @Published var covas: [Bool] = []
     
     init(){
-        FetchCovas()
-        FetchMausoleus()
-    }
-
-    private func FetchCovas() {
-        let request = NSFetchRequest<Cova>(entityName: "Cova")
-        
-        do {
-            covas = try manager.context.fetch(request)
-        } catch let erro {
-            print("Erro ao fazer o fetch de covas. \(erro)")
-        }
-    }
-
-    private func FetchMausoleus() {
-        let request = NSFetchRequest<Mausoleu>(entityName: "Mausoleu")
-        
-        do {
-            mausoleus = try manager.context.fetch(request)
-        } catch let erro {
-            print("Erro ao fazer o fetch de mausoleus. \(erro)")
-        }
+        moedas = prefsUserDefault.moedas
+        mausoleus = prefsUserDefault.mausoleus
+        covas = prefsUserDefault.covas
     }
     
-    public func AtualizarMoedas(quantia: Int){
-        defaults.set(quantia, forKey: "moedas")
-        prefsUserDefault.carregarMoedas()
+    public func salvarMoedas(){
+        prefsUserDefault.userDefaults.setValue(moedas, forKey: "moedas")
     }
     
     public func trocarView(_ cenaAtual: SKScene, proxCena: SKScene, transicao: SKTransition? = nil){
@@ -63,4 +38,11 @@ class GameViewModel: ObservableObject {
         }
     }
     
+    public func salvarMausoleus(){
+        prefsUserDefault.userDefaults.setValue(mausoleus, forKey: "mausoleus")
+    }
+    
+    public func salvarCovas(){
+        prefsUserDefault.userDefaults.setValue(covas, forKey: "covas")
+    }
 }
