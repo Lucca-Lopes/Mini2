@@ -37,6 +37,8 @@ class MenuCompra: SKNode {
         super.init()
         let botaoSim = BotaoNode(image: SKSpriteNode(color: .green, size: CGSize(width: 100, height: 50)), label: SKLabelNode(text: "Sim")) { botao in
             self.comprar()
+            self.removeAllChildren()
+            self.removeAllActions()
         }
         
         let botaoNao = BotaoNode(image: SKSpriteNode(color: .red, size: CGSize(width: 100, height: 50)), label: SKLabelNode(text: "Não")) { botao in
@@ -55,16 +57,18 @@ class MenuCompra: SKNode {
     
     private func comprar(){
         if self.mausoleu != nil {
-            if vm.moedas >= mausoleu!.preco {
-                vm.moedas -= mausoleu!.preco
-                mausoleu!.ativo = true
+            if vm.moedas >= self.mausoleu!.preco {
+                vm.moedas -= self.mausoleu!.preco
+                self.mausoleu!.ativo = true
             }
         }
         
         if self.cova != nil {
-            if vm.moedas >= cova!.preco {
-                vm.moedas -= cova!.preco
-                cova!.ativo = true
+            if vm.moedas >= self.cova!.preco {
+                vm.moedas -= self.cova!.preco
+//                guard let covaTocada = self.parent?.nodes(at: cova!.position) as? CovaView else { return }
+//                self.parent?.nodes(at: cova?.position)
+                self.cova!.ativarCova()
             }
         }
         

@@ -15,7 +15,11 @@ public class CovaView: SKNode {
     let fantasma: SKSpriteNode
     let dinheiroGanho: Int
     var barraDeProgresso: BarraDeProgresso
-    var ativo: Bool
+    var ativo: Bool {
+        didSet {
+            print(ativo)
+        }
+    }
     var preco: Int
 
     public init(posMausoleu: CGPoint, separador: CGFloat, nome: String, ativo: Bool, dinheiroGanho: Int, tempo: CGFloat, preco: Int){
