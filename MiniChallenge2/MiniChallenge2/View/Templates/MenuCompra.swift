@@ -15,24 +15,35 @@ class MenuCompra: SKNode {
     var mausoleu: MausoleuView?
     var cova: CovaView?
     var vm: GameViewModel
+    var textoMoedas: SKLabelNode
     
-    public init(mausoleu: MausoleuView? = nil, cova: CovaView? = nil, vm: GameViewModel) {
+    public init(mausoleu: MausoleuView? = nil, cova: CovaView? = nil, vm: GameViewModel, textoMoedas: SKLabelNode) {
         self.vm = vm
-        fundo = SKSpriteNode(color: .black, size: CGSize(width: 300, height: 250))
+        self.textoMoedas = textoMoedas
+        fundo = SKSpriteNode(color: .black, size: CGSize(width: 300, height: 150))
         label = SKLabelNode(text: "Gostaria de comprar ")
+        label.horizontalAlignmentMode = .center
+        label.verticalAlignmentMode = .center
+        label.fontSize = 24
+        label.lineBreakMode = NSLineBreakMode.byWordWrapping
+        label.numberOfLines = 0
+        label.preferredMaxLayoutWidth = fundo.size.width - 10
+        
+        
+        label.fontName = "Impact"
         
         if let mausoleu = mausoleu {
-            label.text? += "este mausoleu por \(mausoleu.preco)?"
+            label.text? += "este mausoleu por \(mausoleu.preco) moedas?"
             self.mausoleu = mausoleu
         }
         
         if let cova = cova {
-            label.text? += "esta cova por \(cova.preco)?"
+            label.text? += "esta cova por \(cova.preco) moedas?"
             self.cova = cova
         }
         
         fundo.position = CGPoint(x: screenWidth * 0.5, y: screenHeight * 0.5)
-        label.position = CGPoint(x: fundo.position.x, y: fundo.position.y * 1.15)
+        label.position = CGPoint(x: fundo.position.x, y: fundo.position.y * 1.09)
         
         super.init()
         let botaoSim = BotaoNode(image: SKSpriteNode(color: .green, size: CGSize(width: 100, height: 50)), label: SKLabelNode(text: "Sim")) { botao in
@@ -46,8 +57,13 @@ class MenuCompra: SKNode {
             self.removeAllActions()
         }
         
-        botaoNao.position = CGPoint(x: fundo.position.x + botaoNao.image!.size.width * 0.6, y: fundo.position.y * 0.85)
-        botaoSim.position = CGPoint(x: fundo.position.x - botaoSim.image!.size.width * 0.6, y: fundo.position.y * 0.85)
+        botaoSim.label?.fontName = "Impact"
+        botaoSim.label?.fontColor = .black
+        botaoNao.label?.fontName = "Impact"
+        botaoNao.label?.fontColor = .black
+        
+        botaoSim.position = CGPoint(x: fundo.position.x - botaoSim.image!.size.width * 0.6, y: fundo.position.y * 0.92)
+        botaoNao.position = CGPoint(x: fundo.position.x + botaoNao.image!.size.width * 0.6, y: fundo.position.y * 0.92)
         
         self.addChild(fundo)
         self.addChild(label)
@@ -59,7 +75,7 @@ class MenuCompra: SKNode {
         if self.mausoleu != nil {
             if vm.moedas >= self.mausoleu!.preco {
                 vm.moedas -= self.mausoleu!.preco
-                self.mausoleu!.ativo = true
+                self.mausoleu!.ativarMausoleu()
             }
         }
         
@@ -71,7 +87,7 @@ class MenuCompra: SKNode {
                 self.cova!.ativarCova()
             }
         }
-        
+        self.textoMoedas.text = "\(vm.moedas)"
     }
     
     required init?(coder aDecoder: NSCoder) {
