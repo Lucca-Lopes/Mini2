@@ -13,6 +13,8 @@ public class MausoleuView: SKNode {
     var AreaMausoleu: SKSpriteNode
     var ativo: Bool
     var preco: Int
+    var cova1: CovaView
+    var cova2: CovaView
     
     public init(posMausoleu: CGPoint, nome: String, ativo: Bool, cova1Ativa: Bool, cova2Ativa: Bool, dinheiroGanho: Int, tempoCova: CGFloat, precoMausoleu: Int, precoCova: Int) {
         self.preco = precoMausoleu
@@ -30,11 +32,14 @@ public class MausoleuView: SKNode {
         let y = (screenHeight * posMausoleu.y)
         AreaMausoleu.position = CGPoint(x: x * posMausoleu.x, y: y)
         
+        self.cova1 = CovaView(posMausoleu: CGPoint.zero, separador: -separador, nome: nome, ativo: cova1Ativa, dinheiroGanho: dinheiroGanho, tempo: tempoCova, preco: precoCova)
+        self.cova2 = CovaView(posMausoleu: CGPoint.zero, separador: separador, nome: nome, ativo: cova2Ativa, dinheiroGanho: dinheiroGanho, tempo: tempoCova, preco: precoCova)
+        
         super.init()
         
         self.addChild(AreaMausoleu)
-        AreaMausoleu.addChild(CovaView(posMausoleu: CGPoint.zero, separador: -separador, nome: nome, ativo: cova1Ativa, dinheiroGanho: dinheiroGanho, tempo: tempoCova, preco: precoCova))
-        AreaMausoleu.addChild(CovaView(posMausoleu: CGPoint.zero, separador: separador, nome: nome, ativo: cova2Ativa, dinheiroGanho: dinheiroGanho, tempo: tempoCova, preco: precoCova))
+        AreaMausoleu.addChild(cova1)
+        AreaMausoleu.addChild(cova2)
         
     }
     

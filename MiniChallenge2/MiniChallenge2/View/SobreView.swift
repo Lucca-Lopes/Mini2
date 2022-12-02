@@ -10,18 +10,11 @@ import SpriteKit
 class SobreView: SKScene {
     let screenWidth = UIScreen.main.bounds.size.width
     let screenHeight = UIScreen.main.bounds.size.height
-    
-//    class func sobreScene() -> SobreView {
-//        guard let scene = SKScene(fileNamed: "Sobre") as? SobreView else {
-//            abort()
-//        }
-//        scene.scaleMode = .resizeFill
-//        return scene
-//    }
+    var background = SKSpriteNode(imageNamed: "backgroundSobre")
     
     override func sceneDidLoad() {
         super.sceneDidLoad()
-        backgroundColor = .gray
+    
         
         let botaoVoltar = BotaoNode(image: SKSpriteNode(texture: SKTexture(image: UIImage(systemName: "chevron.backward")!)), label: .init(text: "")){ botao in
             let scene: SKScene = ConfigView(size: self.size)
@@ -32,17 +25,23 @@ class SobreView: SKScene {
         botaoVoltar.position = CGPoint(x: (screenWidth/2)-155, y: screenHeight-100)
         addChild(botaoVoltar)
         
-        let texto = SKLabelNode(fontNamed: "Chalkduster")
-        texto.text = "Fantasminha é um jogo estilo comfort games para todas as idades. Colete as moedas, desbloqueie novas áreas e seus fantasmas e se divirta nessa aventura fantasmagórica."
+        let texto = SKLabelNode(fontNamed: "Inter")
+        texto.text = "RIP é um jogo estilo comfort games para todas as idades. Colete as moedas, desbloqueie novas áreas e seus fantasmas e se divirta nessa aventura fantasmagórica."
         
         texto.fontSize = 15
-        texto.horizontalAlignmentMode = .left
-        texto.verticalAlignmentMode = .top
-        texto.position = CGPoint(x: 20, y: 700)
+        texto.fontColor = .black
+        texto.horizontalAlignmentMode = .center
+        texto.verticalAlignmentMode = .center
+        texto.position = CGPoint(x: screenWidth * 0.5, y: screenHeight * 0.5)
         texto.lineBreakMode = NSLineBreakMode.byWordWrapping
         texto.numberOfLines = 0
         texto.preferredMaxLayoutWidth = screenWidth-20
         
+        background.position = CGPoint(x: frame.size.width / 2, y: frame.size.height / 2)
+        background.size = CGSize(width: self.size.width, height: self.size.height)
+        background.zPosition = -10
+        
+        addChild(background)
         addChild(texto)
     }
 }

@@ -11,6 +11,7 @@ import SpriteKit
 class DireitosAutoraisView: SKScene {
     let screenWidth = UIScreen.main.bounds.size.width
     let screenHeight = UIScreen.main.bounds.size.height
+    var background = SKSpriteNode(imageNamed: "backgroundDireitos")
     
     class func direitosScene() -> DireitosAutoraisView {
         guard let scene = SKScene(fileNamed: "Direitos Autorais") as? DireitosAutoraisView else {
@@ -22,7 +23,6 @@ class DireitosAutoraisView: SKScene {
     
     override func sceneDidLoad() {
         super.sceneDidLoad()
-        backgroundColor = .gray
         
         let botaoVoltar = BotaoNode(image: SKSpriteNode(texture: SKTexture(image: UIImage(systemName: "chevron.backward")!)), label: .init(text: "")){ botao in
             let scene: SKScene = ConfigView(size: self.size)
@@ -34,17 +34,22 @@ class DireitosAutoraisView: SKScene {
         addChild(botaoVoltar)
         
         let texto = SKLabelNode(fontNamed: "Inter")
-        texto.text = "©2022FANTASMINHA. Todos os direitos reservados a seus criadores: Larissa Teixeira, Caroline Stelitano, Lucca Lopes e Rodrigo Pereira. Direitos relacionados a música The Foyer, de PlayOnLoop.com, são licensiados por Creative Commons by Attribution 4.0."
+        texto.text = "©2022RIP. Todos os direitos reservados a seus criadores: Larissa Teixeira, Caroline Stelitano, Lucca Lopes e Rodrigo Pereira. Direitos relacionados a música The Foyer, de PlayOnLoop.com, são licensiados por Creative Commons by Attribution 4.0."
         
         texto.fontSize = 15
-        texto.horizontalAlignmentMode = .left
-        texto.verticalAlignmentMode = .top
-        texto.position = CGPoint(x: 20, y: 700)
+        texto.fontColor = .black
+        texto.horizontalAlignmentMode = .center
+        texto.verticalAlignmentMode = .center
+        texto.position = CGPoint(x: screenWidth * 0.5, y: screenHeight * 0.5)
         texto.lineBreakMode = NSLineBreakMode.byWordWrapping
         texto.numberOfLines = 0
         texto.preferredMaxLayoutWidth = screenWidth-20
-        texto.te
         
+        background.position = CGPoint(x: frame.size.width / 2, y: frame.size.height / 2)
+        background.size = CGSize(width: self.size.width, height: self.size.height)
+        background.zPosition = -10
+        
+        addChild(background)
         addChild(texto)
     }
 }
