@@ -60,10 +60,10 @@ public class CovaView: SKNode {
     }
     
     public func ativarCova(){
-        ativo = true
-        addChild(cova)
-        addChild(fantasma)
-        addChild(barraDeProgresso)
+        self.ativo = true
+        self.addChild(cova)
+        self.addChild(fantasma)
+        self.addChild(barraDeProgresso)
     }
     
 }

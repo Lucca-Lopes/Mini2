@@ -100,8 +100,7 @@ class GameScene: SKScene{
     }
     
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard let touch = touches.first else {
-            return
+        guard let touch = touches.first else { return
         }
         let location = touch.location(in: self)
         let touchedNodes = nodes(at: location)
@@ -117,7 +116,9 @@ class GameScene: SKScene{
         }
         
         if !covaTocada.ativo{
-            addChild(MenuCompra(cova: covaTocada, vm: vm))
+//            addChild(MenuCompra(cova: covaTocada, vm: vm))
+            covaTocada.ativarCova()
+            
         }
     }
 }
