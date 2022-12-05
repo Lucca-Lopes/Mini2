@@ -34,7 +34,7 @@ class DireitosAutoraisView: SKScene {
         addChild(botaoVoltar)
         
         let texto = SKLabelNode(fontNamed: "Inter")
-        texto.text = "©2022RIP. Todos os direitos reservados a seus criadores: Larissa Teixeira, Caroline Stelitano, Lucca Lopes e Rodrigo Pereira. Direitos relacionados a música The Foyer, de PlayOnLoop.com, são licensiados por Creative Commons by Attribution 4.0."
+        texto.text = "©2022RIP. Todos os direitos reservados a seus criadores: Larissa Teixeira, Caroline Stelitano, Lucca Lopes e Rodrigo Pereira. Direitos relacionados a música The Foyer, de PlayOnLoop.com, são licenciados por Creative Commons by Attribution 4.0."
         
         texto.fontSize = 15
         texto.fontColor = .black
