@@ -21,7 +21,7 @@ class ConfigView: SKScene {
         let botaoVoltar = BotaoNode(image: SKSpriteNode(texture: SKTexture(image: UIImage(systemName: "chevron.backward")!)), label: .init(text: "")){ botao in
             self.view?.presentScene(SceneController.gameScene!, transition: .fade(withDuration: 0.5))
         }
-        
+        botaoVoltar.addChild(SKSpriteNode(color: .clear, size: CGSize(width: 50, height: 50)))
         botaoVoltar.image?.size = CGSize(width: 12, height: 18)
         botaoVoltar.position = CGPoint(x: (screenWidth/2)-155, y: screenHeight-100)
         botaoVoltar.zPosition = 1

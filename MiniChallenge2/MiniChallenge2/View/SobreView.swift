@@ -20,13 +20,13 @@ class SobreView: SKScene {
             let scene: SKScene = ConfigView(size: self.size)
             self.view?.presentScene(scene, transition: .fade(withDuration: 0.5))
         }
-        
+        botaoVoltar.addChild(SKSpriteNode(color: .clear, size: CGSize(width: 50, height: 50)))
         botaoVoltar.image?.size = CGSize(width: 12, height: 18)
         botaoVoltar.position = CGPoint(x: (screenWidth/2)-155, y: screenHeight-100)
         addChild(botaoVoltar)
         
         let texto = SKLabelNode(fontNamed: "Inter")
-        texto.text = "RIP é um jogo estilo comfort games para todas as idades. Colete as moedas, desbloqueie novas áreas e seus fantasmas e se divirta nessa aventura fantasmagórica."
+        texto.text = "Aqui Jaz é um jogo estilo comfort games para todas as idades. Colete as moedas, desbloqueie novas áreas e seus fantasmas e se divirta nessa aventura fantasmagórica."
         
         texto.fontSize = 15
         texto.fontColor = .black
