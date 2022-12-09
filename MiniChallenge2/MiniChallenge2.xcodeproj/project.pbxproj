@@ -30,6 +30,8 @@
 		829FFB23293157E400602CD3 /* DireitosAutoraisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829FFB22293157E400602CD3 /* DireitosAutoraisView.swift */; };
 		829FFB25293158B300602CD3 /* PoliticaPrivacidadeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829FFB24293158B300602CD3 /* PoliticaPrivacidadeView.swift */; };
 		A7A0F2912937EB8F00D11077 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0F2902937EB8F00D11077 /* Audio.swift */; };
+		DF08EA10293E8280004914F2 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF08EA0F293E8280004914F2 /* Launch Screen.storyboard */; };
+		DFD0DE0D293FB80900BF170D /* ConfigSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD0DE0C293FB80900BF170D /* ConfigSwiftUI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +59,8 @@
 		829FFB22293157E400602CD3 /* DireitosAutoraisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DireitosAutoraisView.swift; sourceTree = "<group>"; };
 		829FFB24293158B300602CD3 /* PoliticaPrivacidadeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticaPrivacidadeView.swift; sourceTree = "<group>"; };
 		A7A0F2902937EB8F00D11077 /* Audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
+		DF08EA0F293E8280004914F2 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		DFD0DE0C293FB80900BF170D /* ConfigSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigSwiftUI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +155,8 @@
 				82967C082930034700E80605 /* SobreView.swift */,
 				829FFB22293157E400602CD3 /* DireitosAutoraisView.swift */,
 				829FFB24293158B300602CD3 /* PoliticaPrivacidadeView.swift */,
+				DF08EA0F293E8280004914F2 /* Launch Screen.storyboard */,
+				DFD0DE0C293FB80900BF170D /* ConfigSwiftUI.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -225,6 +231,7 @@
 				2B5EF055292563390082F1F6 /* Preview Assets.xcassets in Resources */,
 				46C7581E2938398100414550 /* coin.m4a in Resources */,
 				46C7581A29381F1C00414550 /* gameThemeTheFoyer.wav in Resources */,
+				DF08EA10293E8280004914F2 /* Launch Screen.storyboard in Resources */,
 				2B5EF052292563390082F1F6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,6 +258,7 @@
 				2BD89D3D292C1B55005F06E9 /* MausoleuView.swift in Sources */,
 				829FFB23293157E400602CD3 /* DireitosAutoraisView.swift in Sources */,
 				2B9CA859292577F90020EB8E /* Container.xcdatamodeld in Sources */,
+				DFD0DE0D293FB80900BF170D /* ConfigSwiftUI.swift in Sources */,
 				82967C092930034700E80605 /* SobreView.swift in Sources */,
 				2B9CA856292576E40020EB8E /* CoreDataManager.swift in Sources */,
 				43D744C02939336300BD0BA5 /* MenuCompra.swift in Sources */,
@@ -390,6 +398,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -423,6 +432,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "";
 				LD_RUNPATH_SEARCH_PATHS = (

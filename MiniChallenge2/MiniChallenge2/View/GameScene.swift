@@ -42,7 +42,7 @@ class GameScene: SKScene{
         spriteMoeda.position = CGPoint(x: textoMoedas.position.x - (spriteMoeda.size.width / 1.85), y: textoMoedas.position.y)
         
         //Em posMausoleu, para criar a área na direita, passa-se 1 como parâmetro do x. Para criar na esquerda, passa-se 3.
-        let mausoleu1 = MausoleuView(posMausoleu: CGPoint(x: 0.75, y: 0.65), nome: "pobre", ativo: vm.mausoleus[0], cova1Ativa: vm.covas[0], cova2Ativa: vm.covas[1], dinheiroGanho: 5, tempoCova: 5, precoMausoleu: 0, precoCova: 50)
+        let mausoleu1 = MausoleuView(posMausoleu: CGPoint(x: 0.75, y: 0.65), nome: "pobre", ativo: vm.mausoleus[0], cova1Ativa: vm.covas[0], cova2Ativa: vm.covas[1], dinheiroGanho: 5000, tempoCova: 5, precoMausoleu: 0, precoCova: 50)
         let mausoleu2 = MausoleuView(posMausoleu: CGPoint(x: 3.25, y: 0.65), nome: "trabalhador", ativo: vm.mausoleus[1], cova1Ativa: vm.covas[2], cova2Ativa: vm.covas[3], dinheiroGanho: 15, tempoCova: 10, precoMausoleu: 100, precoCova: 50)
 
         let mausoleu3 = MausoleuView(posMausoleu: CGPoint(x: 0.75, y: 0.4), nome: "artista", ativo: vm.mausoleus[2], cova1Ativa: vm.covas[4], cova2Ativa: vm.covas[5], dinheiroGanho: 30, tempoCova: 15, precoMausoleu: 250, precoCova: 125)
