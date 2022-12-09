@@ -26,7 +26,7 @@ class PoliticaPrivacidadeView: SKScene {
         
         let botaoVoltar = BotaoNode(image: SKSpriteNode(texture: SKTexture(image: UIImage(systemName: "chevron.backward")!)), label: .init(text: "")){ botao in
             let scene: SKScene = ConfigView(size: self.size)
-            self.view?.presentScene(scene)
+            self.view?.presentScene(scene, transition: .fade(withDuration: 0.5))
         }
         
         botaoVoltar.image?.size = CGSize(width: 12, height: 18)

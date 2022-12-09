@@ -10,5 +10,4 @@ import Foundation
 struct SceneController {
     
     static var gameScene: GameScene?
-    static var configScene: ConfigView?
 }
