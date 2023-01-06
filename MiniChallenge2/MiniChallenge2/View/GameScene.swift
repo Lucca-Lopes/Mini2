@@ -23,7 +23,7 @@ class GameScene: SKScene{
         
         let infoButton = BotaoNode(image: SKSpriteNode(texture: SKTexture(image: UIImage(imageLiteralResourceName: "engrenagem"))), label: .init(text: "")){ botao in
             let scene: SKScene = ConfigView(size: self.size)
-            self.view?.presentScene(scene)
+            self.view?.presentScene(scene, transition: .fade(withDuration: 0.5))
         }
         
         infoButton.image?.size = CGSize(width: 35, height: 35)

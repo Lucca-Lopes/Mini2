@@ -21,7 +21,7 @@ class ConfigView: SKScene {
         SceneController.configScene = self
         
         let botaoVoltar = BotaoNode(image: SKSpriteNode(texture: SKTexture(image: UIImage(systemName: "chevron.backward")!)), label: .init(text: "")){ botao in
-            self.view?.presentScene(SceneController.gameScene)
+            self.view?.presentScene(SceneController.gameScene!, transition: .fade(withDuration: 0.5))
         }
         
         botaoVoltar.image?.size = CGSize(width: 12, height: 18)
