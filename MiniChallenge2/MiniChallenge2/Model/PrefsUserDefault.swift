@@ -19,6 +19,7 @@ class PrefsUserDefault {
     
     init(){
 //        verificaPrimeiroUso()
+        zerarUD()
         carregarJogo()
     }
     
@@ -56,6 +57,11 @@ class PrefsUserDefault {
         }
     }
     
+    func zerarUD(){
+        userDefaults.setValue(0, forKey: "moedas")
+        userDefaults.setValue([true, false, false, false, false, false], forKey: "mausoleus")
+        userDefaults.setValue([true, false, false, false, false, false, false, false, false, false, false, false], forKey: "covas")
+    }
     
 //    func verificaPrimeiroUso(){
 //        if let load = UserDefaults().value(forKey: "primeiroUso") as? Bool {

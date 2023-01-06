@@ -255,6 +255,7 @@
 				2BD89D3D292C1B55005F06E9 /* MausoleuView.swift in Sources */,
 				829FFB23293157E400602CD3 /* DireitosAutoraisView.swift in Sources */,
 				2B9CA859292577F90020EB8E /* Container.xcdatamodeld in Sources */,
+				DFD0DE0D293FB80900BF170D /* ConfigSwiftUI.swift in Sources */,
 				82967C092930034700E80605 /* SobreView.swift in Sources */,
 				2B9CA856292576E40020EB8E /* CoreDataManager.swift in Sources */,
 				43D744C02939336300BD0BA5 /* MenuCompra.swift in Sources */,

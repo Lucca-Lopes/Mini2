@@ -9,7 +9,7 @@ class GameScene: SKScene{
     var musicPlayer: AVAudioPlayer?
     var coinPlayer: AVAudioPlayer?
     var textoMoedas: SKLabelNode = SKLabelNode()
-    var background = SKSpriteNode(imageNamed: "cenario")
+    var background = SKSpriteNode(imageNamed: "Cenario")
     var mausoleus: [MausoleuView] = []
     
     override func sceneDidLoad() {

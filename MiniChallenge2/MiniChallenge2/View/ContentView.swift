@@ -16,8 +16,21 @@ struct ContentView: View {
     }
     
     var body: some View {
+//        ZStack {
+            SpriteView(scene: scene)
+                .ignoresSafeArea()
+//            VStack {
+//                Button{
+//                    print("Clicou")
+//                    let configScene: SKScene = ConfigView(size: self.scene.size)
+//                    self.scene.view?.presentScene(configScene)
+//                }label:{
+//                    Text("Config")
+//                }
+//                Spacer()
+//            }
+            
+//        }
         
-        SpriteView(scene: scene)
-            .ignoresSafeArea()
     }
 }
