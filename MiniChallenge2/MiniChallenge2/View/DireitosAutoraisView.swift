@@ -26,15 +26,15 @@ class DireitosAutoraisView: SKScene {
         
         let botaoVoltar = BotaoNode(image: SKSpriteNode(texture: SKTexture(image: UIImage(systemName: "chevron.backward")!)), label: .init(text: "")){ botao in
             let scene: SKScene = ConfigView(size: self.size)
-            self.view?.presentScene(scene)
+            self.view?.presentScene(scene, transition: .fade(withDuration: 0.5))
         }
-        
+        botaoVoltar.addChild(SKSpriteNode(color: .clear, size: CGSize(width: 50, height: 50)))
         botaoVoltar.image?.size = CGSize(width: 12, height: 18)
         botaoVoltar.position = CGPoint(x: (screenWidth/2)-155, y: screenHeight-100)
         addChild(botaoVoltar)
         
         let texto = SKLabelNode(fontNamed: "Inter")
-        texto.text = "©2022RIP. Todos os direitos reservados a seus criadores: Larissa Teixeira, Caroline Stelitano, Lucca Lopes e Rodrigo Pereira. Direitos relacionados a música The Foyer, de PlayOnLoop.com, são licenciados por Creative Commons by Attribution 4.0."
+        texto.text = "©2022AquiJaz. Todos os direitos reservados a seus criadores: Larissa Teixeira, Caroline Stelitano, Lucca Lopes e Rodrigo Pereira. Direitos relacionados a música The Foyer, de PlayOnLoop.com, são licenciados por Creative Commons by Attribution 4.0."
         
         texto.fontSize = 15
         texto.fontColor = .black

@@ -16,7 +16,6 @@ class GameScene: SKScene{
         SceneController.gameScene = self
         Audio.inicializarValoresPadrao()
         self.decidirSeTocaMusica()
-//        backgroundColor = .systemGray6
         
         self.background.size = CGSize(width: screenWidth, height: screenHeight)
         self.background.position = CGPoint(x: screenWidth * 0.5, y: screenHeight * 0.5)
@@ -65,27 +64,6 @@ class GameScene: SKScene{
         addChild(infoButton)
     }
     
-
-    
-    override func willMove(from view: SKView) {
-        
-        var mausoleusAtivados: [Bool] = []
-        var covasAtivadas: [Bool] = []
-        
-        for mausoleu in mausoleus {
-            mausoleusAtivados.append(mausoleu.ativo)
-            covasAtivadas.append(mausoleu.cova1.ativo)
-            covasAtivadas.append(mausoleu.cova2.ativo)
-        }
-        
-        vm.mausoleus = mausoleusAtivados
-        vm.covas = covasAtivadas
-        
-        vm.salvarMoedas()
-        vm.salvarMausoleus()
-        vm.salvarCovas()
-    }
-    
     func decidirSeTocaMusica() {
         let musicaAtivada = Audio.pegarMusicaAtivada()
         if (musicaAtivada) {
@@ -128,8 +106,7 @@ class GameScene: SKScene{
     }
     
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard let touch = touches.first else { return
-        }
+        guard let touch = touches.first else { return }
         let location = touch.location(in: self)
         let touchedNodes = nodes(at: location)
         
@@ -141,15 +118,36 @@ class GameScene: SKScene{
             vm.moedas+=covaTocada.dinheiroGanho
             textoMoedas.text = "\(vm.moedas)"
             covaTocada.barraDeProgresso.timer()
-            print("clicou em \(covaTocada.nome)")
+            salvarUD()
         }
         
         if covaTocada.ativo == false && mausoleuTocado.ativo == false{
+            salvarUD()
             addChild(MenuCompra(mausoleu: mausoleuTocado, vm: vm, textoMoedas: textoMoedas))
         }
         
         else if covaTocada.ativo == false && mausoleuTocado.ativo == true {
+            salvarUD()
             addChild(MenuCompra(cova: covaTocada, vm: vm, textoMoedas: textoMoedas))
         }
     }
+    
+    private func salvarUD(){
+        var mausoleusAtivados: [Bool] = []
+        var covasAtivadas: [Bool] = []
+        
+        for mausoleu in mausoleus {
+            mausoleusAtivados.append(mausoleu.ativo)
+            covasAtivadas.append(mausoleu.cova1.ativo)
+            covasAtivadas.append(mausoleu.cova2.ativo)
+        }
+        
+        vm.mausoleus = mausoleusAtivados
+        vm.covas = covasAtivadas
+        
+        vm.salvarMoedas()
+        vm.salvarMausoleus()
+        vm.salvarCovas()
+    }
+    
 }

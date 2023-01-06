@@ -82,8 +82,6 @@ class MenuCompra: SKNode {
         if self.cova != nil {
             if vm.moedas >= self.cova!.preco {
                 vm.moedas -= self.cova!.preco
-//                guard let covaTocada = self.parent?.nodes(at: cova!.position) as? CovaView else { return }
-//                self.parent?.nodes(at: cova?.position)
                 self.cova!.ativarCova()
             }
         }

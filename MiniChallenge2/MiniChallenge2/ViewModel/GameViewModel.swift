@@ -27,17 +27,6 @@ class GameViewModel: ObservableObject {
         prefsUserDefault.userDefaults.setValue(moedas, forKey: "moedas")
     }
     
-    public func trocarView(_ cenaAtual: SKScene, proxCena: SKScene, transicao: SKTransition? = nil){
-        if let transicao = transicao {
-            proxCena.scaleMode = .resizeFill
-            cenaAtual.view?.presentScene(proxCena, transition: transicao)
-        }
-        else {
-            proxCena.scaleMode = .resizeFill
-            cenaAtual.view?.presentScene(proxCena)
-        }
-    }
-    
     public func salvarMausoleus(){
         prefsUserDefault.userDefaults.setValue(mausoleus, forKey: "mausoleus")
     }
@@ -45,7 +34,5 @@ class GameViewModel: ObservableObject {
     public func salvarCovas(){
         prefsUserDefault.userDefaults.setValue(covas, forKey: "covas")
     }
-    
-    
     
 }

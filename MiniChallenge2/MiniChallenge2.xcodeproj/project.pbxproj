@@ -30,8 +30,7 @@
 		829FFB23293157E400602CD3 /* DireitosAutoraisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829FFB22293157E400602CD3 /* DireitosAutoraisView.swift */; };
 		829FFB25293158B300602CD3 /* PoliticaPrivacidadeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829FFB24293158B300602CD3 /* PoliticaPrivacidadeView.swift */; };
 		A7A0F2912937EB8F00D11077 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0F2902937EB8F00D11077 /* Audio.swift */; };
-		DF08EA10293E8280004914F2 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF08EA0F293E8280004914F2 /* Launch Screen.storyboard */; };
-		DFD0DE0D293FB80900BF170D /* ConfigSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD0DE0C293FB80900BF170D /* ConfigSwiftUI.swift */; };
+		DF22E3C62943D2E300B39A6B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF22E3C52943D2E300B39A6B /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,8 +58,7 @@
 		829FFB22293157E400602CD3 /* DireitosAutoraisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DireitosAutoraisView.swift; sourceTree = "<group>"; };
 		829FFB24293158B300602CD3 /* PoliticaPrivacidadeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticaPrivacidadeView.swift; sourceTree = "<group>"; };
 		A7A0F2902937EB8F00D11077 /* Audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
-		DF08EA0F293E8280004914F2 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		DFD0DE0C293FB80900BF170D /* ConfigSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigSwiftUI.swift; sourceTree = "<group>"; };
+		DF22E3C52943D2E300B39A6B /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,8 +153,7 @@
 				82967C082930034700E80605 /* SobreView.swift */,
 				829FFB22293157E400602CD3 /* DireitosAutoraisView.swift */,
 				829FFB24293158B300602CD3 /* PoliticaPrivacidadeView.swift */,
-				DF08EA0F293E8280004914F2 /* Launch Screen.storyboard */,
-				DFD0DE0C293FB80900BF170D /* ConfigSwiftUI.swift */,
+				DF22E3C52943D2E300B39A6B /* Launch Screen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -231,7 +228,7 @@
 				2B5EF055292563390082F1F6 /* Preview Assets.xcassets in Resources */,
 				46C7581E2938398100414550 /* coin.m4a in Resources */,
 				46C7581A29381F1C00414550 /* gameThemeTheFoyer.wav in Resources */,
-				DF08EA10293E8280004914F2 /* Launch Screen.storyboard in Resources */,
+				DF22E3C62943D2E300B39A6B /* Launch Screen.storyboard in Resources */,
 				2B5EF052292563390082F1F6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,7 +316,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -373,7 +370,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -391,10 +388,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MiniChallenge2/Preview Content\"";
-				DEVELOPMENT_TEAM = RRUDNBUBWM;
+				DEVELOPMENT_TEAM = V32Q5HA7F8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = RIP;
+				INFOPLIST_KEY_CFBundleDisplayName = "Aqui Jaz";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -425,10 +422,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MiniChallenge2/Preview Content\"";
-				DEVELOPMENT_TEAM = RRUDNBUBWM;
+				DEVELOPMENT_TEAM = V32Q5HA7F8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = RIP;
+				INFOPLIST_KEY_CFBundleDisplayName = "Aqui Jaz";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
