@@ -20,7 +20,7 @@ class ConfigView: SKScene {
     func sceneDidLoad() {
         SceneController.configScene = self
         
-        let botaoVoltar = BotaoNode(image: SKSpriteNode(texture: SKTexture(image: UIImage(systemName: "chevron.backward")!)), label: .init(text: "Voltar")){ botao in
+        let botaoVoltar = BotaoNode(image: SKSpriteNode(texture: SKTexture(image: UIImage(systemName: "chevron.backward")!)), label: .init(text: "")){ botao in
             self.view?.presentScene(SceneController.gameScene)
         }
         
