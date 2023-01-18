@@ -19,7 +19,7 @@ class PrefsUserDefault {
     
     init(){
 //        verificaPrimeiroUso()
-        zerarUD()
+//        zerarUD()
         carregarJogo()
     }
     

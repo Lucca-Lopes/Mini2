@@ -29,6 +29,7 @@
 		82967C092930034700E80605 /* SobreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82967C082930034700E80605 /* SobreView.swift */; };
 		829FFB23293157E400602CD3 /* DireitosAutoraisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829FFB22293157E400602CD3 /* DireitosAutoraisView.swift */; };
 		829FFB25293158B300602CD3 /* PoliticaPrivacidadeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829FFB24293158B300602CD3 /* PoliticaPrivacidadeView.swift */; };
+		A705CC9D2968953C00A53EAA /* GlossarioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A705CC9C2968953C00A53EAA /* GlossarioView.swift */; };
 		A7A0F2912937EB8F00D11077 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0F2902937EB8F00D11077 /* Audio.swift */; };
 		DF22E3C62943D2E300B39A6B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF22E3C52943D2E300B39A6B /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
@@ -57,6 +58,7 @@
 		82967C082930034700E80605 /* SobreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SobreView.swift; sourceTree = "<group>"; };
 		829FFB22293157E400602CD3 /* DireitosAutoraisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DireitosAutoraisView.swift; sourceTree = "<group>"; };
 		829FFB24293158B300602CD3 /* PoliticaPrivacidadeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticaPrivacidadeView.swift; sourceTree = "<group>"; };
+		A705CC9C2968953C00A53EAA /* GlossarioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossarioView.swift; sourceTree = "<group>"; };
 		A7A0F2902937EB8F00D11077 /* Audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
 		DF22E3C52943D2E300B39A6B /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,6 +151,7 @@
 				2B6C23F9292D65C8001C2F9C /* Templates */,
 				2B5EF04F292563360082F1F6 /* ContentView.swift */,
 				2B9B07AA2927F7E80096A50F /* GameScene.swift */,
+				A705CC9C2968953C00A53EAA /* GlossarioView.swift */,
 				82967C06292FE7EB00E80605 /* ConfigView.swift */,
 				82967C082930034700E80605 /* SobreView.swift */,
 				829FFB22293157E400602CD3 /* DireitosAutoraisView.swift */,
@@ -252,10 +255,10 @@
 				A7A0F2912937EB8F00D11077 /* Audio.swift in Sources */,
 				005E5255292FD01200185F8D /* BarraDeProgresso.swift in Sources */,
 				00B11E4F292F7C8700766D3F /* HUDView.swift in Sources */,
+				A705CC9D2968953C00A53EAA /* GlossarioView.swift in Sources */,
 				2BD89D3D292C1B55005F06E9 /* MausoleuView.swift in Sources */,
 				829FFB23293157E400602CD3 /* DireitosAutoraisView.swift in Sources */,
 				2B9CA859292577F90020EB8E /* Container.xcdatamodeld in Sources */,
-				DFD0DE0D293FB80900BF170D /* ConfigSwiftUI.swift in Sources */,
 				82967C092930034700E80605 /* SobreView.swift in Sources */,
 				2B9CA856292576E40020EB8E /* CoreDataManager.swift in Sources */,
 				43D744C02939336300BD0BA5 /* MenuCompra.swift in Sources */,
