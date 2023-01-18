@@ -28,6 +28,15 @@ class GameScene: SKScene{
         infoButton.image?.size = CGSize(width: 35, height: 35)
         infoButton.position = CGPoint(x: screenWidth-55, y: screenHeight-100)
         
+        //ALTERAR ICONE DO GLOSSARIO
+        let glossarioButton = BotaoNode(image: SKSpriteNode(texture: SKTexture(image: UIImage(imageLiteralResourceName: "engrenagem"))), label: .init(text: "")){ botao in
+            let scene: SKScene = GlossarioView(size: self.size)
+            self.view?.presentScene(scene, transition: .fade(withDuration: 0.5))
+        }
+        
+        glossarioButton.image?.size = CGSize(width: 35, height: 35)
+        glossarioButton.position = CGPoint(x: screenWidth-95, y: screenHeight-100)
+        
         textoMoedas = SKLabelNode(text: "\(vm.moedas)")
         textoMoedas.fontName = "Impact"
         textoMoedas.horizontalAlignmentMode = .left
@@ -62,6 +71,7 @@ class GameScene: SKScene{
         addChild(mausoleu5)
         addChild(mausoleu6)
         addChild(infoButton)
+        addChild(glossarioButton)
     }
     
     func decidirSeTocaMusica() {
